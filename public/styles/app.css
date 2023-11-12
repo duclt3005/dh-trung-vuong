@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+p,
+a {
+  color: #263238;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1042px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/app.scss%22,%22../../scss/variable.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AACA;AAGR;EACE;;;AAGF;EACE;;;AAGF;AAAA;EAEE,OCTQ;;;ADYV;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE%22,%22file%22:%22app.css%22%7D */

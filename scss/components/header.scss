@@ -1,0 +1,187 @@
+.top-header {
+  height: 12px;
+  background: $dhtv-2;
+}
+
+.header {
+  padding: 8px 0;
+  background-color: $dhtv-10;
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    flex-grow: 1;
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: 0.014px;
+
+      &:hover {
+        background-color: $dhtv-9;
+      }
+    }
+
+    &--child {
+      position: relative;
+
+      svg {
+        transition: all 0.2s;
+      }
+
+      &::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        height: 4px;
+        z-index: 10;
+      }
+
+      &:hover {
+        .header__submenu {
+          display: block;
+        }
+
+        a {
+          background-color: $dhtv-9;
+        }
+
+        svg {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  &__submenu {
+    display: none;
+    position: absolute;
+
+    a {
+      white-space: nowrap;
+      margin-top: 1px;
+      background-color: $dhtv-9;
+
+      &:hover {
+        background-color: $dhtv-8;
+      }
+    }
+
+    .submenu__item {
+      width: 224px;
+      white-space: unset;
+    }
+  }
+
+  &__menu-mb {
+    display: none;
+  }
+
+  &__auth {
+    a {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 32px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.014px;
+      color: #fff;
+      background-color: $dhtv-2;
+    }
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logo-text {
+    &--university {
+      color: $dhtv-2;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.175px;
+      text-transform: uppercase;
+    }
+
+    &--faculty {
+      color: #018953;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.08px;
+    }
+  }
+}
+
+.header-mb {
+  display: none;
+}
+
+@media screen and (max-width: 1040px) {
+  .header {
+    padding: 8px 16px;
+
+    .logo-text {
+      display: none;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__menu-mb {
+      display: block;
+      flex-grow: 1;
+
+      i {
+        font-size: 24px;
+        color: $dhtv-2;
+      }
+    }
+  }
+
+  .header-mb {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &__overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__content {
+      position: fixed;
+      width: 240px;
+      height: 100%;
+      background-color: $dhtv-10;
+
+      .header__logo {
+        display: flex;
+        flex-direction: column;
+        padding: 8px 0;
+      }
+    }
+  }
+}

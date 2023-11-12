@@ -1,0 +1,20 @@
+{
+  "name": "trung-vuong-university",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass ./scss:public/styles",
+    "sass-watch": "sass --watch --embed-source-map ./scss:public/styles",
+    "sass-prod": "sass --no-source-map --style compressed ./scss:public/styles",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "duclt",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  }
+}
