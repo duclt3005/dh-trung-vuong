@@ -17,11 +17,13 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
 
 p,
-a {
-  color: $neutral;
+a,
+span {
+  color: $neutral-10;
 }
 
 p {
@@ -43,4 +45,41 @@ a {
 
 .container {
   max-width: 1042px;
+}
+
+.btn {
+  padding: 8px 16px;
+  width: 132px;
+  height: 40px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: $dhtv-2;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.014px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $dhtv-1;
+    color: #fff;
+  }
+}
+
+.input {
+  height: 40px;
+  background-color: #fff;
+  padding: 0 16px;
+  color: $neutral-10;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 40px;
+  border-radius: 4px;
+  padding: 8px 16px;
 }
