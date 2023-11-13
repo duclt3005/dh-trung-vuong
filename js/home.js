@@ -1,4 +1,3 @@
-import "/node_modules/jquery/dist/jquery.min.js";
 
 $(".js-open-submenu").on("click", function () {
   $(this).parent().parent().find(".header-mb__submenu").slideToggle();

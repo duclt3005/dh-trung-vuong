@@ -1,6 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import "./variable.scss";
+
+@font-face {
+  font-family: "SVN-Bali Script";
+  src: url("/public/font/SVN-Bali-Script.ttf");
+}
+
+@font-face {
+  font-family: "UTM HelvetIns";
+  src: url("/public/font/UTM HelvetIns.ttf");
+}
 
 * {
   box-sizing: border-box;

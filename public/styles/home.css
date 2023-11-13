@@ -1,5 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-@import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@font-face {
+  font-family: "SVN-Bali Script";
+  src: url("/public/font/SVN-Bali-Script.ttf");
+}
+@font-face {
+  font-family: "UTM HelvetIns";
+  src: url("/public/font/UTM HelvetIns.ttf");
+}
 * {
   box-sizing: border-box;
 }
@@ -64,6 +71,7 @@ a {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.014px;
+  white-space: nowrap;
 }
 .header__menu a:hover {
   background-color: #ffccd1;
@@ -241,5 +249,165 @@ a {
     cursor: pointer;
   }
 }
+.banner {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  background: url("/public/images/banner/background.jpg") center;
+  background-size: contain;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.banner__model {
+  position: absolute;
+  bottom: 0;
+  left: 125px;
+  width: 632px;
+  height: auto;
+}
+.banner__content {
+  position: absolute;
+  right: -33px;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 927px;
+}
+.banner__department {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 35px;
+  border-radius: 78px;
+  border: 2px solid #fff;
+  background-color: #BB1019;
+  width: fit-content;
+  padding: 7px 28px;
+}
+.banner__slogan {
+  color: #fff;
+  text-align: center;
+  font-family: "SVN-Bali Script";
+  font-size: 40px;
+  height: 52px;
+  line-height: 52px;
+}
+.banner__title {
+  margin-top: 40px;
+  color: #fff200;
+  text-align: center;
+  font-family: "UTM HelvetIns";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 60px;
+}
+.banner__major {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+.banner__info {
+  display: flex;
+  gap: 38px;
+  padding: 20px 16px;
+  margin: 40px 0;
+  border: 1px solid #fff200;
+  border-radius: 12px;
+  background-color: #fff;
+}
+.banner__info .info-code {
+  position: relative;
+}
+.banner__info .info-code .major-text {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.014px;
+  text-transform: uppercase;
+}
+.banner__info .info-code .major-code {
+  width: 210px;
+  padding: 5px 20px;
+  margin: 4px 0;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #c92027;
+  border: 1px solid #f19998;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.03px;
+}
+.banner__info .info-code::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 84px;
+  background-color: #c92027;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10px;
+}
+.banner__info .info-school {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+.banner__info .info-school span:first-child {
+  color: #c92027;
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 70px;
+}
+.banner__info .info-school span:last-child {
+  color: #c92027;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.03px;
+}
+.banner__info .info-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.banner__info .info-time p:first-child {
+  color: #263238;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.014px;
+}
+.banner__info .info-time p:last-child {
+  color: #c92027;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+}
+.banner__register {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 40px;
+  background-color: #fff;
+}
+.banner__register .register {
+  padding: 8px 16px;
+  border-radius: 32px;
+  white-space: nowrap;
+  background-color: #fff200;
+  color: #c92027;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/app.scss%22,%22../../scss/variable.scss%22,%22../../scss/components/header.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AACA;AAGR;EACE;;;AAGF;EACE;;;AAGF;AAAA;EAEE,OCTQ;;;ADYV;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AEnCF;EACE;EACA,YDFO;;;ACKT;EACE;EACA,kBDJQ;;ACMR;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,kBD/BC;;ACmCL;EACE;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAIA;EACE;;AAGF;EACE,kBD1DD;;AC6DD;EACE;;AAMR;EACE;EACA;;AAEA;EACE;EACA;EACA,kBD3EG;;AC6EH;EACE,kBD/EC;;ACmFL;EACE;EACA;;AAIJ;EACE;;AAIA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBDvGG;;;AC4GT;EACE;EACA;EACA;;AAGE;EACE,ODnHG;ECoHH;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;;AAKN;EACE;;;AAGF;EACE;IACE;;EAEA;IACE;;EAGF;IACE;;EAGF;IACE;IACA;IACA;;EAEA;IACE;IACA,OD1JC;;EC+JP;IACE;IACA;IACA;IACA;;EAEA;IACE;IACA;IACA;IACA;IACA;;EAGF;IACE;IACA;IACA;IACA;IACA,kBD/KI;ICgLJ;;EAEA;IACE;IACA;IACA;;EAKF;IACE;IACA;IACA;IACA;IACA;IACA;;EAEA;IACE,kBDpMD;;ECuMD;IACE;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAIJ;IACE;IACA;;EAGF;IACE,kBD1NC;;EC4ND;IACE;;EAKN;IACE;;EAEA;IACE;IACA;;EAEA;IACE,kBD1OD;;EC+OL;IACE;IACA;IACA;IACA;IACA;IACA%22,%22file%22:%22home.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/app.scss%22,%22../../scss/variable.scss%22,%22../../scss/components/header.scss%22,%22../../scss/home.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAGR;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;;;AAGF;EACE;;;AAGF;AAAA;EAEE,OCjBQ;;;ADoBV;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AE5CF;EACE;EACA,YDDO;;;ACIT;EACE;EACA,kBDHQ;;ACKR;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,kBD/BC;;ACmCL;EACE;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAIA;EACE;;AAGF;EACE,kBD1DD;;AC6DD;EACE;;AAMR;EACE;EACA;;AAEA;EACE;EACA;EACA,kBD3EG;;AC6EH;EACE,kBD/EC;;ACmFL;EACE;EACA;;AAIJ;EACE;;AAIA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBDvGG;;;AC4GT;EACE;EACA;EACA;;AAGE;EACE,ODnHG;ECoHH;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;;AAKN;EACE;;;AAGF;EACE;IACE;;EAEA;IACE;;EAGF;IACE;;EAGF;IACE;IACA;IACA;;EAEA;IACE;IACA,OD1JC;;EC+JP;IACE;IACA;IACA;IACA;;EAEA;IACE;IACA;IACA;IACA;IACA;;EAGF;IACE;IACA;IACA;IACA;IACA,kBD/KI;ICgLJ;;EAEA;IACE;IACA;IACA;;EAKF;IACE;IACA;IACA;IACA;IACA;IACA;;EAEA;IACE,kBDpMD;;ECuMD;IACE;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAIJ;IACE;IACA;;EAGF;IACE,kBD1NC;;EC4ND;IACE;;EAKN;IACE;;EAEA;IACE;IACA;;EAEA;IACE,kBD1OD;;EC+OL;IACE;IACA;IACA;IACA;IACA;IACA;;;ACrPN;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBFvCK;EEwCL;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA,kBFhGC;EEiGD;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA,kBF9GC;EE+GD;EACA;EACA;;AAIJ;EACE;EACA;EACA;;AAEA;EACE,OF3HC;EE4HD;EACA;EACA;EACA;EACA;;AAGF;EACE,OFpIC;EEqID;EACA;EACA;EACA;;AAIJ;EACE;EACA;EACA;;AAEA;EACE,OF7IE;EE8IF;EACA;EACA;EACA;;AAGF;EACE,OF1JC;EE2JD;EACA;EACA;;AAKN;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA,OF9KG;EE+KH;EACA;EACA%22,%22file%22:%22home.css%22%7D */
