@@ -158,13 +158,13 @@ a {
   .header__menu-mb {
     display: block;
     flex-grow: 1;
+    cursor: pointer;
   }
   .header__menu-mb i {
     font-size: 24px;
     color: #c92027;
   }
   .header-mb {
-    display: block;
     position: fixed;
     top: 0;
     width: 100%;
@@ -179,15 +179,67 @@ a {
   }
   .header-mb__content {
     position: fixed;
-    width: 240px;
+    width: 360px;
+    left: -360px;
     height: 100%;
     background-color: #ffebed;
+    transition: all 0.4s ease-in-out;
   }
   .header-mb__content .header__logo {
     display: flex;
     flex-direction: column;
     padding: 8px 0;
   }
+  .header-mb__menu .menu__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 16px;
+  }
+  .header-mb__menu .menu__item:hover {
+    background-color: #ffccd1;
+  }
+  .header-mb__menu .menu__item i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .header-mb__menu a {
+    display: inline-block;
+    width: 100%;
+  }
+  .header-mb__menu .menu__item.active {
+    background-color: #ffccd1;
+  }
+  .header-mb__menu .menu__item.active i {
+    transform: rotate(90deg);
+  }
+  .header-mb__submenu {
+    display: none;
+  }
+  .header-mb__submenu li {
+    padding: 16px 32px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .header-mb__submenu li:hover {
+    background-color: #ffccd1;
+  }
+  .header-mb__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+  }
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/app.scss%22,%22../../scss/variable.scss%22,%22../../scss/components/header.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AACA;AAGR;EACE;;;AAGF;EACE;;;AAGF;AAAA;EAEE,OCTQ;;;ADYV;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AEnCF;EACE;EACA,YDFO;;;ACKT;EACE;EACA,kBDJQ;;ACMR;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,kBD/BC;;ACmCL;EACE;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAIA;EACE;;AAGF;EACE,kBD1DD;;AC6DD;EACE;;AAMR;EACE;EACA;;AAEA;EACE;EACA;EACA,kBD3EG;;AC6EH;EACE,kBD/EC;;ACmFL;EACE;EACA;;AAIJ;EACE;;AAIA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBDvGG;;;AC4GT;EACE;EACA;EACA;;AAGE;EACE,ODnHG;ECoHH;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;;AAKN;EACE;;;AAGF;EACE;IACE;;EAEA;IACE;;EAGF;IACE;;EAGF;IACE;IACA;;EAEA;IACE;IACA,ODzJC;;EC8JP;IACE;IACA;IACA;IACA;IACA;;EAEA;IACE;IACA;IACA;IACA;IACA;;EAGF;IACE;IACA;IACA;IACA,kBD9KI;;ECgLJ;IACE;IACA;IACA%22,%22file%22:%22home.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/app.scss%22,%22../../scss/variable.scss%22,%22../../scss/components/header.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AACA;AAGR;EACE;;;AAGF;EACE;;;AAGF;AAAA;EAEE,OCTQ;;;ADYV;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AEnCF;EACE;EACA,YDFO;;;ACKT;EACE;EACA,kBDJQ;;ACMR;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,kBD/BC;;ACmCL;EACE;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAIA;EACE;;AAGF;EACE,kBD1DD;;AC6DD;EACE;;AAMR;EACE;EACA;;AAEA;EACE;EACA;EACA,kBD3EG;;AC6EH;EACE,kBD/EC;;ACmFL;EACE;EACA;;AAIJ;EACE;;AAIA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBDvGG;;;AC4GT;EACE;EACA;EACA;;AAGE;EACE,ODnHG;ECoHH;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;;AAKN;EACE;;;AAGF;EACE;IACE;;EAEA;IACE;;EAGF;IACE;;EAGF;IACE;IACA;IACA;;EAEA;IACE;IACA,OD1JC;;EC+JP;IACE;IACA;IACA;IACA;;EAEA;IACE;IACA;IACA;IACA;IACA;;EAGF;IACE;IACA;IACA;IACA;IACA,kBD/KI;ICgLJ;;EAEA;IACE;IACA;IACA;;EAKF;IACE;IACA;IACA;IACA;IACA;IACA;;EAEA;IACE,kBDpMD;;ECuMD;IACE;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAIJ;IACE;IACA;;EAGF;IACE,kBD1NC;;EC4ND;IACE;;EAKN;IACE;;EAEA;IACE;IACA;;EAEA;IACE,kBD1OD;;EC+OL;IACE;IACA;IACA;IACA;IACA;IACA%22,%22file%22:%22home.css%22%7D */

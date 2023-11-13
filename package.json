@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "sass-dev": "sass ./scss:public/styles",
     "sass-watch": "sass --watch --embed-source-map ./scss:public/styles",
@@ -15,6 +16,7 @@
     "sass": "^1.69.5"
   },
   "dependencies": {
-    "bootstrap": "^5.3.2"
+    "bootstrap": "^5.3.2",
+    "jquery": "^3.7.1"
   }
 }

@@ -68,7 +68,7 @@
               </ul>
             </li>
           </ul>
-          <div class="header__menu-mb">
+          <div class="header__menu-mb js-header-mb">
             <i class="fa-solid fa-bars"></i>
           </div>
           <div class="header__auth">
@@ -78,8 +78,11 @@
       </div>
     </header>
     <div class="header-mb">
-      <div class="header-mb__overlay"></div>
+      <div class="header-mb__overlay js-header-mb-close"></div>
       <div class="header-mb__content">
+        <div class="header-mb__close js-header-mb-close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
         <div class="header__logo">
           <a href="/"><img src="public/images/logo.png" alt="" /></a>
           <div class="logo-text">
@@ -87,7 +90,60 @@
             <p class="logo-text--faculty">“Khoa Truyền thông”</p>
           </div>
         </div>
+        <ul class="header-mb__menu">
+          <li>
+            <div class="menu__item"><a href="">Trang chủ</a></div>
+          </li>
+          <li>
+            <div class="menu__item">
+              <a href="">Tuyển sinh</a>
+              <i class="fa-solid fa-angle-right js-open-submenu"></i>
+            </div>
+            <ul class="header-mb__submenu">
+              <li><a href="">Đề án và Thông báo tuyển sinh</a></li>
+              <li><a href="">Quỹ học bổng Tân sinh viên</a></li>
+              <li><a href="">Tin tức Tuyển sinh và kỳ thi THPT QG</a></li>
+              <li><a href="">Đăng ký xét tuyển ONLINE</a></li>
+              <li><a href="">Đăng ký tư vấn</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="menu__item">
+              <a href="">Đào tạo</a>
+              <i class="fa-solid fa-angle-right js-open-submenu"></i>
+            </div>
+            <ul class="header-mb__submenu">
+              <li>
+                <a href="" class="submenu__item"> Chương trình đào tạo cử nhân ngành Truyền thông đa phương tiện </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="menu__item"><a href="">Giảng viên</a></div>
+          </li>
+          <li>
+            <div class="menu__item">
+              <a href="">Tin tức</a>
+              <i class="fa-solid fa-angle-right js-open-submenu"></i>
+            </div>
+            <ul class="header-mb__submenu">
+              <li><a href="">Tin tức Khoa</a></li>
+              <li><a href="">Tin tức Sinh Viên</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="menu__item">
+              <a href=""> Mở rộng </a>
+              <i class="fa-solid fa-angle-right js-open-submenu"></i>
+            </div>
+            <ul class="header-mb__submenu">
+              <li><a href="">Liên hệ</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
+
+    <script type="module" src="./js/home.js"></script>
   </body>
 </html>
