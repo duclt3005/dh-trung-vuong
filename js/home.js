@@ -1,3 +1,4 @@
+import "../libs/slick/slick.js";
 
 $(".js-open-submenu").on("click", function () {
   $(this).parent().parent().find(".header-mb__submenu").slideToggle();
@@ -12,4 +13,9 @@ $(".js-header-mb").on("click", function () {
 $(".js-header-mb-close").on("click", function () {
   $(".header-mb").slideUp();
   $(".header-mb__content").css("left", "-360px");
+});
+
+$('.slide').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
 });

@@ -22,7 +22,13 @@ span {
   color: #263238;
 }
 
-p {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -45,7 +51,7 @@ a {
 
 .btn {
   padding: 8px 16px;
-  width: 132px;
+  width: 164px;
   height: 40px;
   text-transform: uppercase;
   color: #fff;
@@ -79,4 +85,4 @@ button {
   padding: 8px 16px;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/app.scss%22,%22../../scss/variable.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAGR;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;AAAA;AAAA;EAGE,OClBW;;;ADqBb;EACE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,kBCtDO;EDuDP;EACA;EACA;EACA;;AAEA;EACE,kBC9DK;ED+DL;;;AAIJ;EACE;EACA;EACA;EACA,OChEW;EDiEX;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA%22,%22file%22:%22app.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/app.scss%22,%22../../scss/variable.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAGR;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;AAAA;AAAA;EAGE,OChBW;;;ADmBb;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAOE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,kBC5DO;ED6DP;EACA;EACA;EACA;;AAEA;EACE,kBCpEK;EDqEL;;;AAIJ;EACE;EACA;EACA;EACA,OCpEW;EDqEX;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA%22,%22file%22:%22app.css%22%7D */

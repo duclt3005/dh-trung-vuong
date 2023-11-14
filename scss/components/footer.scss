@@ -1,0 +1,59 @@
+.footer {
+  background-color: #fdf8ef;
+  padding-bottom: 12px;
+
+  &__wrapper {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  &__info {
+    img {
+      width: 177px;
+      height: 124px;
+    }
+
+    .department {
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $dhtv-2;
+      margin-bottom: 24px;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+
+      &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $dhtv-2;
+      }
+
+      span {
+        font-size: 14px;
+        white-space: nowrap;
+      }
+
+      &__text {
+        font-weight: 500;
+        color: $dhtv-2;
+      }
+    }
+  }
+
+  &__map {
+    iframe {
+      width: 357px;
+      height: 200px;
+    }
+  }
+}
