@@ -16,6 +16,29 @@ $(".js-header-mb-close").on("click", function () {
 });
 
 $('.slide').slick({
-  slidesToShow: 4,
-  slidesToScroll: 1,
+  slidesToShow: 5,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1536,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 3,
+      }
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    },
+  ]
 });

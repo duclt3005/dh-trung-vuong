@@ -1,5 +1,6 @@
 .footer {
   background-color: #fdf8ef;
+  padding-top: 48px;
   padding-bottom: 12px;
 
   &__wrapper {
@@ -28,12 +29,16 @@
       gap: 8px;
       margin-bottom: 8px;
 
+      > div {
+        white-space: nowrap;
+      }
+
       &__icon {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 40px;
-        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
         border-radius: 50%;
         background-color: $dhtv-2;
       }
@@ -54,6 +59,46 @@
     iframe {
       width: 357px;
       height: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .footer {
+    &__wrapper {
+      padding: 0 16px;
+      flex-wrap: wrap;
+    }
+
+    &__info {
+      .info > div {
+        white-space: unset;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      span:last-child {
+        white-space: unset;
+      }
+    }
+
+    &__map {
+      width: 100%;
+      iframe {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    &__info {
+      .info {
+        span:last-child {
+          word-break: break-word;
+        }
+      }
     }
   }
 }

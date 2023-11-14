@@ -7,8 +7,8 @@
   width: 100%;
   height: auto;
   aspect-ratio: 16/9;
-  background: url("/public/images/banner/background.jpg") center;
-  background-size: contain;
+  background: url("/public/images/banner/background.jpg") center no-repeat;
+  background-size: cover;
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -16,14 +16,14 @@
   &__model {
     position: absolute;
     bottom: 0;
-    left: 125px;
-    width: 632px;
+    left: 15%;
+    width: 40%;
     height: auto;
   }
 
   &__content {
     position: absolute;
-    right: -33px;
+    right: 0px;
     top: 60px;
     display: flex;
     flex-direction: column;
@@ -87,7 +87,6 @@
         text-align: center;
         font-size: 14px;
         font-weight: 700;
-        letter-spacing: 0.014px;
         text-transform: uppercase;
       }
 
@@ -100,11 +99,9 @@
         border-radius: 5px;
         background-color: $dhtv-2;
         border: 1px solid $dhtv-8;
-        text-align: center;
         font-family: Roboto;
         font-size: 20px;
         font-weight: 700;
-        letter-spacing: 0.03px;
       }
 
       &::after {
@@ -138,7 +135,6 @@
         font-size: 20px;
         font-weight: 500;
         line-height: 28px;
-        letter-spacing: 0.03px;
       }
     }
 
@@ -151,7 +147,6 @@
         text-align: center;
         font-size: 14px;
         font-weight: 700;
-        letter-spacing: 0.014px;
       }
 
       p:last-child {
@@ -201,7 +196,6 @@
         text-align: center;
         font-size: 12px;
         font-weight: 300;
-        letter-spacing: 0.048px;
         color: $neutral-6;
       }
 
@@ -209,7 +203,6 @@
         text-align: center;
         font-size: 12px;
         font-weight: 700;
-        letter-spacing: 0.048px;
       }
     }
   }
@@ -241,7 +234,6 @@
 
     h4 {
       font-size: 14px;
-      letter-spacing: 0.035px;
       padding: 0 50px 48px;
       font-weight: 400;
     }
@@ -261,6 +253,7 @@
   &__list-1 {
     gap: 18px;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -282,7 +275,6 @@
       text-overflow: ellipsis;
       font-size: 20px;
       font-weight: 500;
-      letter-spacing: 0.03px;
       margin-top: 8px;
 
       &:hover {
@@ -292,7 +284,7 @@
   }
 
   &__item-1 {
-    width: calc(100% / 3);
+    width: calc(100% / 3 - 18px);
     background-color: #fff;
     border-radius: 20px;
     text-align: center;
@@ -322,7 +314,6 @@
       font-size: 14px;
       font-weight: 500;
       line-height: 24px;
-      letter-spacing: 0.014px;
     }
 
     .item__description {
@@ -331,7 +322,6 @@
       text-align: center;
       font-size: 14px;
       line-height: 24px;
-      letter-spacing: 0.035px;
       flex-grow: 1;
     }
   }
@@ -350,7 +340,6 @@
     h3 {
       font-size: 20px;
       font-weight: 500;
-      letter-spacing: 0.03px;
       text-transform: uppercase;
       color: #fff;
       margin-bottom: 12px;
@@ -374,7 +363,6 @@
       color: $dhtv-2;
       font-size: 14px;
       font-weight: 500;
-      letter-spacing: 0.014px;
       text-transform: uppercase;
     }
   }
@@ -433,13 +421,11 @@
           color: $dhtv-2;
           font-size: 20px;
           font-weight: 500;
-          letter-spacing: 0.03px;
         }
 
         p {
           font-size: 13px;
           font-weight: 400;
-          letter-spacing: 0.048px;
         }
       }
     }
@@ -468,7 +454,6 @@
     font-weight: 500;
     font-size: 20px;
     padding: 18px 10px;
-    letter-spacing: 0.03px;
     line-height: 24px;
   }
 
@@ -489,7 +474,6 @@
         color: #0d8852;
         text-align: center;
         font-weight: 500;
-        letter-spacing: 0.175px;
         text-transform: uppercase;
         width: 155px;
         font-size: 14px;
@@ -497,7 +481,6 @@
 
       td:last-child {
         font-size: 12px;
-        letter-spacing: 0.048px;
       }
     }
   }
@@ -506,14 +489,12 @@
 .h2 {
   font-weight: 900;
   font-size: 34px;
-  letter-spacing: 0.085px;
   text-align: center;
 }
 
 .h3 {
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: 0.03px;
   text-transform: uppercase;
   margin-bottom: 12px;
   text-align: center;
@@ -561,7 +542,6 @@
       text-align: center;
       font-size: 14px;
       font-weight: 400;
-      letter-spacing: 0.035px;
     }
   }
 
@@ -572,7 +552,8 @@
 
     .lecturer {
       width: calc(100% / 3);
-      position: relative;
+      display: flex;
+      flex-direction: column;
 
       img {
         width: 100%;
@@ -580,10 +561,12 @@
       }
 
       &__info {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
         padding: 12px;
+        background-color: $dhtv-2;
+        height: auto;
+        flex: 1;
 
         p {
           color: #fff;
@@ -591,7 +574,6 @@
           font-weight: 500;
           font-size: 14px;
           line-height: 20px;
-          letter-spacing: 0.014px;
         }
 
         .name {
@@ -602,6 +584,7 @@
 
         .position {
           margin-bottom: 12px;
+          flex: 1;
         }
       }
     }
@@ -760,13 +743,13 @@
   }
 
   .banner__model {
-    width: 562px;
+    width: 40%;
   }
 
   &__wrapper {
     position: absolute;
-    right: 262px;
-    bottom: 51px;
+    right: 20%;
+    bottom: 15%;
     display: flex;
     justify-content: flex-end;
     padding: 4px;
@@ -874,6 +857,441 @@
             font-size: 14px;
             font-weight: 500;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1536px) {
+  .banner {
+    &__model {
+      left: 125px;
+      width: 632px;
+    }
+
+    &__content {
+      right: -33px;
+    }
+  }
+
+  .consultation {
+    .banner__model {
+      width: 526px;
+    }
+
+    &__wrapper {
+      right: 262px;
+      bottom: 51px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .banner {
+    &__model {
+      left: 100px;
+      width: 568px;
+    }
+  }
+
+  .consultation {
+    .banner__title {
+      margin-top: 32px;
+    }
+
+    &__wrapper {
+      bottom: 3%;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .banner {
+    &__model {
+      left: 100px;
+      width: 480px;
+    }
+
+    &__department {
+      font-size: 26px;
+    }
+
+    &__slogan {
+      font-size: 36px;
+    }
+
+    &__title {
+      font-size: 36px;
+      margin-top: 24px;
+    }
+
+    &__major {
+      font-size: 26px;
+    }
+
+    &__info {
+      padding: 16px 12px;
+
+      .info-code {
+        .major-code {
+          font-size: 16px;
+        }
+      }
+
+      .info-school {
+        span:first-child {
+          font-size: 56px;
+        }
+
+        span:last-child {
+          font-size: 18px;
+        }
+      }
+
+      .info-time {
+        p:last-child {
+          font-size: 44px;
+        }
+      }
+    }
+  }
+
+  .consultation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 0;
+
+    .banner__model {
+      display: none;
+    }
+
+    .banner__content {
+      position: relative;
+      right: unset;
+      transform: unset;
+      top: 0;
+      margin-bottom: 32px;
+    }
+
+    &__wrapper {
+      position: relative;
+      bottom: unset;
+      right: unset;
+    }
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .banner {
+    display: flex;
+    justify-content: center;
+    padding: 48px 0;
+    aspect-ratio: auto;
+    background-size: cover;
+
+    &__model {
+      display: none;
+    }
+
+    &__content {
+      position: relative;
+      right: unset;
+      top: unset;
+      width: auto;
+    }
+  }
+
+  .lecturers {
+    h2 {
+      br {
+        display: none;
+      }
+    }
+
+    &__list {
+      gap: 24px;
+    }
+  }
+
+  .infrastructures {
+    svg {
+      display: none;
+    }
+
+    span {
+      margin-top: 16px;
+    }
+
+    &__line {
+      display: none;
+    }
+
+    &__room {
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+
+      .room {
+        width: calc(100% / 3 - 16px);
+      }
+    }
+  }
+
+  .students {
+    &__description {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .banner {
+    &__department {
+      font-size: 22px;
+    }
+
+    &__slogan {
+      font-size: 32px;
+    }
+
+    &__title {
+      font-size: 32px;
+      margin-top: 24px;
+    }
+
+    &__major {
+      font-size: 22px;
+    }
+
+    &__info {
+      padding: 16px 12px;
+
+      .info-code {
+        .major-code {
+          font-size: 14px;
+          width: 160px;
+        }
+      }
+
+      .info-school {
+        span:first-child {
+          font-size: 40px;
+        }
+
+        span:last-child {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      .info-time {
+        p:last-child {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  .news {
+    &__form {
+      flex-wrap: wrap;
+
+      input,
+      button {
+        width: 50%;
+      }
+    }
+
+    &__item-1 {
+      width: calc(50% - 18px);
+    }
+  }
+
+  .admissions {
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+
+  .principal {
+    &__person {
+      .person__img {
+        min-width: 220px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .h2 {
+    font-size: 30px;
+    padding: 0 16px;
+  }
+
+  .h3 {
+    font-size: 18px;
+    padding: 0 16px;
+  }
+
+  .news {
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__items {
+      width: 100%;
+    }
+
+    &__item-1 {
+      width: 100%;
+    }
+  }
+
+  .lecturers {
+    &__list {
+      flex-wrap: wrap;
+
+      .lecturer {
+        width: 100%;
+
+        &__info {
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .students {
+    &__description {
+      font-size: 16px;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+      gap: 16px;
+
+      div {
+        width: calc(50% - 16px);
+      }
+    }
+  }
+
+  .principal {
+    &__person {
+      flex-direction: column;
+
+      .person__img {
+        min-width: 220px;
+      }
+
+      .person__info {
+        .name {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .consultation {
+    &__form {
+      h3 {
+        font-size: 30px;
+      }
+
+      input {
+        font-size: 14px;
+      }
+
+      form {
+        padding: 0 40px;
+      }
+
+      .form__btn button {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .banner {
+    &__department {
+      margin: 0px 16px;
+    }
+  }
+
+  .infrastructures {
+    &__room {
+      .room {
+        width: 100%;
+
+        &__name {
+          font-size: 20px;
+        }
+
+        span {
+          font-size: 16px;
+        }
+
+        &__code {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .principal {
+    &__person {
+      padding: 0 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .students {
+    &__list {
+      div {
+        width: 100%;
+      }
+    }
+  }
+
+  .principal {
+    &__person {
+      padding: 0;
+    }
+  }
+
+  .consultation {
+    padding: 48px 16px;
+
+    &__wrapper {
+      width: 100%;
+    }
+
+    &__form {
+      max-width: 100%;
+    }
+
+    &__time {
+      .dot-wrapper {
+        display: none;
+      }
+
+      .counter {
+        flex: 1;
+
+        .timer {
+          justify-content: center;
         }
       }
     }

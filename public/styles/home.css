@@ -387,6 +387,7 @@ button {
 }
 .footer {
   background-color: #fdf8ef;
+  padding-top: 48px;
   padding-bottom: 12px;
 }
 .footer__wrapper {
@@ -411,12 +412,15 @@ button {
   gap: 8px;
   margin-bottom: 8px;
 }
+.footer__info .info > div {
+  white-space: nowrap;
+}
 .footer__info .info__icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 50%;
   background-color: #c92027;
 }
@@ -433,12 +437,38 @@ button {
   height: 200px;
 }
 
+@media screen and (max-width: 1040px) {
+  .footer__wrapper {
+    padding: 0 16px;
+    flex-wrap: wrap;
+  }
+  .footer__info .info > div {
+    white-space: unset;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .footer__info span:last-child {
+    white-space: unset;
+  }
+  .footer__map {
+    width: 100%;
+  }
+  .footer__map iframe {
+    width: 100%;
+    height: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__info .info span:last-child {
+    word-break: break-word;
+  }
+}
 .banner {
   width: 100%;
   height: auto;
   aspect-ratio: 16/9;
-  background: url("/public/images/banner/background.jpg") center;
-  background-size: contain;
+  background: url("/public/images/banner/background.jpg") center no-repeat;
+  background-size: cover;
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -446,13 +476,13 @@ button {
 .banner__model {
   position: absolute;
   bottom: 0;
-  left: 125px;
-  width: 632px;
+  left: 15%;
+  width: 40%;
   height: auto;
 }
 .banner__content {
   position: absolute;
-  right: -33px;
+  right: 0px;
   top: 60px;
   display: flex;
   flex-direction: column;
@@ -511,7 +541,6 @@ button {
   text-align: center;
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.014px;
   text-transform: uppercase;
 }
 .banner__info .info-code .major-code {
@@ -523,11 +552,9 @@ button {
   border-radius: 5px;
   background-color: #c92027;
   border: 1px solid #f19998;
-  text-align: center;
   font-family: Roboto;
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: 0.03px;
 }
 .banner__info .info-code::after {
   content: "";
@@ -557,7 +584,6 @@ button {
   font-size: 20px;
   font-weight: 500;
   line-height: 28px;
-  letter-spacing: 0.03px;
 }
 .banner__info .info-time {
   display: flex;
@@ -568,7 +594,6 @@ button {
   text-align: center;
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.014px;
 }
 .banner__info .info-time p:last-child {
   color: #c92027;
@@ -612,14 +637,12 @@ button {
   text-align: center;
   font-size: 12px;
   font-weight: 300;
-  letter-spacing: 0.048px;
   color: #607d8b;
 }
 .banner__register .register-date span:last-child {
   text-align: center;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.048px;
 }
 
 .divider {
@@ -647,7 +670,6 @@ button {
 }
 .news__header h4 {
   font-size: 14px;
-  letter-spacing: 0.035px;
   padding: 0 50px 48px;
   font-weight: 400;
 }
@@ -663,6 +685,7 @@ button {
 .news__list-1 {
   gap: 18px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .news__item .item__image {
   padding: 8px;
@@ -680,14 +703,13 @@ button {
   text-overflow: ellipsis;
   font-size: 20px;
   font-weight: 500;
-  letter-spacing: 0.03px;
   margin-top: 8px;
 }
 .news__item a:hover {
   color: #c92027;
 }
 .news__item-1 {
-  width: 33.3333333333%;
+  width: calc(33.3333333333% - 18px);
   background-color: #fff;
   border-radius: 20px;
   text-align: center;
@@ -715,7 +737,6 @@ button {
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
-  letter-spacing: 0.014px;
 }
 .news__item-1 .item__description {
   margin: 0 24px 18px;
@@ -723,7 +744,6 @@ button {
   text-align: center;
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: 0.035px;
   flex-grow: 1;
 }
 .news__btn {
@@ -739,7 +759,6 @@ button {
 .news__footer h3 {
   font-size: 20px;
   font-weight: 500;
-  letter-spacing: 0.03px;
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 12px;
@@ -758,7 +777,6 @@ button {
   color: #c92027;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.014px;
   text-transform: uppercase;
 }
 
@@ -809,12 +827,10 @@ button {
   color: #c92027;
   font-size: 20px;
   font-weight: 500;
-  letter-spacing: 0.03px;
 }
 .major__reasons .reason__content p {
   font-size: 13px;
   font-weight: 400;
-  letter-spacing: 0.048px;
 }
 
 .admissions {
@@ -837,7 +853,6 @@ button {
   font-weight: 500;
   font-size: 20px;
   padding: 18px 10px;
-  letter-spacing: 0.03px;
   line-height: 24px;
 }
 .admissions table {
@@ -855,27 +870,23 @@ button {
   color: #0d8852;
   text-align: center;
   font-weight: 500;
-  letter-spacing: 0.175px;
   text-transform: uppercase;
   width: 155px;
   font-size: 14px;
 }
 .admissions table .item__col td:last-child {
   font-size: 12px;
-  letter-spacing: 0.048px;
 }
 
 .h2 {
   font-weight: 900;
   font-size: 34px;
-  letter-spacing: 0.085px;
   text-align: center;
 }
 
 .h3 {
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: 0.03px;
   text-transform: uppercase;
   margin-bottom: 12px;
   text-align: center;
@@ -917,7 +928,6 @@ button {
   text-align: center;
   font-size: 14px;
   font-weight: 400;
-  letter-spacing: 0.035px;
 }
 .lecturers__list {
   display: flex;
@@ -926,17 +936,20 @@ button {
 }
 .lecturers__list .lecturer {
   width: 33.3333333333%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .lecturers__list .lecturer img {
   width: 100%;
   height: auto;
 }
 .lecturers__list .lecturer__info {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 12px;
+  background-color: #c92027;
+  height: auto;
+  flex: 1;
 }
 .lecturers__list .lecturer__info p {
   color: #fff;
@@ -944,7 +957,6 @@ button {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0.014px;
 }
 .lecturers__list .lecturer__info .name {
   text-align: center;
@@ -953,6 +965,7 @@ button {
 }
 .lecturers__list .lecturer__info .position {
   margin-bottom: 12px;
+  flex: 1;
 }
 
 .infrastructures {
@@ -1083,12 +1096,12 @@ button {
   transform: translateX(50%);
 }
 .consultation .banner__model {
-  width: 562px;
+  width: 40%;
 }
 .consultation__wrapper {
   position: absolute;
-  right: 262px;
-  bottom: 51px;
+  right: 20%;
+  bottom: 15%;
   display: flex;
   justify-content: flex-end;
   padding: 4px;
@@ -1181,4 +1194,289 @@ button {
   font-weight: 500;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/app.scss%22,%22../../scss/variable.scss%22,%22../../libs/slick/slick.scss%22,%22../../scss/components/header.scss%22,%22../../scss/components/footer.scss%22,%22../../scss/home.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAGR;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;AAAA;AAAA;EAGE,OChBW;;;ADmBb;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAOE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,kBC5DO;ED6DP;EACA;EACA;EACA;;AAEA;EACE,kBCpEK;EDqEL;;;AAIJ;EACE;EACA;EACA;EACA,OCpEW;EDqEX;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AEzFF;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;;AAGJ;EACI;EACA;;;AAGR;AAAA;EAEI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EAEI;EACA;;AAGJ;EACI;;AAGJ;EACI;;;AAGR;EACI;EACA;EACA;EAWA;;AAVA;EACI;;AAEJ;EACI;;AAEJ;EACI;;AAKJ;EACI;;AAGJ;EACI;;AAGJ;EACI;;AAGJ;EACI;EACA;EACA;;;AAGR;EACI;;;AClGJ;EACE;EACA,YFDO;;;AEIT;EACE;EACA,kBFFQ;;AEIR;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,kBF7BC;;AEiCL;EACE;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAIA;EACE;;AAGF;EACE,kBFxDD;;AE2DD;EACE;;AAMR;EACE;EACA;;AAEA;EACE;EACA;EACA,kBFzEG;;AE2EH;EACE,kBF7EC;;AEiFL;EACE;EACA;;AAIJ;EACE;;AAIA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBFtGG;;;AE2GT;EACE;EACA;EACA;;AAGE;EACE,OFlHG;EEmHH;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;;AAKN;EACE;;;AAGF;EACE;IACE;;EAEA;IACE;;EAGF;IACE;;EAGF;IACE;IACA;IACA;;EAEA;IACE;IACA,OFzJC;;EE8JP;IACE;IACA;IACA;IACA;;EAEA;IACE;IACA;IACA;IACA;IACA;;EAGF;IACE;IACA;IACA;IACA;IACA,kBF7KI;IE8KJ;;EAEA;IACE;IACA;IACA;;EAKF;IACE;IACA;IACA;IACA;IACA;IACA;;EAEA;IACE,kBFlMD;;EEqMD;IACE;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAIJ;IACE;IACA;;EAGF;IACE,kBFxNC;;EE0ND;IACE;;EAKN;IACE;;EAEA;IACE;IACA;;EAEA;IACE,kBFxOD;;EE6OL;IACE;IACA;IACA;IACA;IACA;IACA;;;ACvPN;EACE;EACA;;AAEA;EACE;EACA;EACA;;AAIA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA,OHnBG;EGoBH;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA,kBHpCC;;AGuCH;EACE;EACA;;AAGF;EACE;EACA,OH9CC;;AGoDL;EACE;EACA;;;AClDN;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBJzCK;EI0CL;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA,OJ9CM;EI+CN;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,OJ7EK;EI8EL;EACA;;AAEA;EACE;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA,kBJnGC;EIoGD;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA,kBJjHC;EIkHD;EACA;EACA;;AAIJ;EACE;EACA;EACA;;AAEA;EACE,OJ9HC;EI+HD;EACA;EACA;EACA;EACA;;AAGF;EACE,OJvIC;EIwID;EACA;EACA;EACA;;AAIJ;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE,OJ5JC;EI6JD;EACA;EACA;;AAKN;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA,kBJvKI;EIwKJ,OJlLG;EImLH,OJnLG;EIoLH;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA,kBJrLO;;AIwLT;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA,OJpMI;;AIuMN;EACE;EACA;EACA;EACA;;;AAMR;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;;AAEA;EACE;EACA;EACA;EACA,kBJvOK;EIwOL;;AAEA;AAAA;AAAA;EAGE;;AAGF;EACE;EACA;EACA;EACA;;AAIJ;EACE;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;;AAIA;EACE;EACA,kBJ3QG;;AI6QH;EACE;EACA;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,OJ/RC;;AIoSP;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAIJ;EACE;EACA,OJ9TG;EI+TH;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAIJ;EACE;;AAGF;EACE;EACA;EACA,kBJxVK;EIyVL;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;AAIJ;EACE;EACA;EACA;;AAGE;EACE,OJrWK;EIsWL;;AAIJ;EACE,kBJzWI;EI0WJ,OJpXG;EIqXH;EACA;EACA;EACA;;;AAMJ;EACE;;;AAIJ;EACE;EACA;EACA;;AAEA;EACE,OJzYK;;AI4YP;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA,kBJpaC;EIqaD;EACA;EACA;EACA;EACA;;AAIA;EACE;EACA,OJ/aD;EIgbC;EACA;EACA;;AAGF;EACE;EACA;EACA;;;AAOV;EACE,kBJ5bQ;EI6bR;;AAEA;EACE,OJpcK;;AIucP;EACE;EACA;EACA;;AAGF;EACE;EACA,kBJ/cK;EIgdL;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAIA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;;;AAMR;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAIA;EACE;;AAGF;EACE;;AAGF;EACE;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;;AAKN;EACE,kBJ/hBQ;EIgiBR;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAIJ;EACE;EACA;EACA;;AAEA;EACE;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;;;AAOV;EACE;EACA;;AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,OJ/nBG;EIgoBH,kBJ7nBG;;AIgoBL;EACE;EACA;EACA,OJnoBG;EIooBH;EACA;EACA;;AAGF;EACE;;AAGF;EACE,OJjpBG;EIkpBH;EACA;EACA;EACA;EACA;EACA;EACA;;AAIJ;EACE;EACA;EACA;EACA,kBJ7pBK;EI8pBL;;;AAIJ;EACE;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA,kBJjrBK;EIkrBL;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;;AAEA;EACE;EACA;;;AAMR;EACE;EACA;;AAEA;EACE,OJ7sBK;EI8sBL;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;;AAEA;EACE;EACA;;AAKF;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;;;AAON;EACE;EACA;;AAGF;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA,kBJ1wBK;;AI4wBL;EACE;EACA,OJ7wBG;EI8wBH;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAGE;EACE,OJzxBG;;AI6xBP;EACE;;AAGF;EACE,kBJhyBE;EIiyBF,OJ3yBC;EI4yBD;;AAKN;EACE;EACA;EACA;EACA;EACA;;AAGE;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAKF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA%22,%22file%22:%22home.css%22%7D */
+@media screen and (max-width: 1536px) {
+  .banner__model {
+    left: 125px;
+    width: 632px;
+  }
+  .banner__content {
+    right: -33px;
+  }
+  .consultation .banner__model {
+    width: 526px;
+  }
+  .consultation__wrapper {
+    right: 262px;
+    bottom: 51px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .banner__model {
+    left: 100px;
+    width: 568px;
+  }
+  .consultation .banner__title {
+    margin-top: 32px;
+  }
+  .consultation__wrapper {
+    bottom: 3%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .banner__model {
+    left: 100px;
+    width: 480px;
+  }
+  .banner__department {
+    font-size: 26px;
+  }
+  .banner__slogan {
+    font-size: 36px;
+  }
+  .banner__title {
+    font-size: 36px;
+    margin-top: 24px;
+  }
+  .banner__major {
+    font-size: 26px;
+  }
+  .banner__info {
+    padding: 16px 12px;
+  }
+  .banner__info .info-code .major-code {
+    font-size: 16px;
+  }
+  .banner__info .info-school span:first-child {
+    font-size: 56px;
+  }
+  .banner__info .info-school span:last-child {
+    font-size: 18px;
+  }
+  .banner__info .info-time p:last-child {
+    font-size: 44px;
+  }
+  .consultation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 0;
+  }
+  .consultation .banner__model {
+    display: none;
+  }
+  .consultation .banner__content {
+    position: relative;
+    right: unset;
+    transform: unset;
+    top: 0;
+    margin-bottom: 32px;
+  }
+  .consultation__wrapper {
+    position: relative;
+    bottom: unset;
+    right: unset;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .banner {
+    display: flex;
+    justify-content: center;
+    padding: 48px 0;
+    aspect-ratio: auto;
+    background-size: cover;
+  }
+  .banner__model {
+    display: none;
+  }
+  .banner__content {
+    position: relative;
+    right: unset;
+    top: unset;
+    width: auto;
+  }
+  .lecturers h2 br {
+    display: none;
+  }
+  .lecturers__list {
+    gap: 24px;
+  }
+  .infrastructures svg {
+    display: none;
+  }
+  .infrastructures span {
+    margin-top: 16px;
+  }
+  .infrastructures__line {
+    display: none;
+  }
+  .infrastructures__room {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  .infrastructures__room .room {
+    width: calc(33.3333333333% - 16px);
+  }
+  .students__description {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .banner__department {
+    font-size: 22px;
+  }
+  .banner__slogan {
+    font-size: 32px;
+  }
+  .banner__title {
+    font-size: 32px;
+    margin-top: 24px;
+  }
+  .banner__major {
+    font-size: 22px;
+  }
+  .banner__info {
+    padding: 16px 12px;
+  }
+  .banner__info .info-code .major-code {
+    font-size: 14px;
+    width: 160px;
+  }
+  .banner__info .info-school span:first-child {
+    font-size: 40px;
+  }
+  .banner__info .info-school span:last-child {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .banner__info .info-time p:last-child {
+    font-size: 32px;
+  }
+  .news__form {
+    flex-wrap: wrap;
+  }
+  .news__form input,
+  .news__form button {
+    width: 50%;
+  }
+  .news__item-1 {
+    width: calc(50% - 18px);
+  }
+  .admissions__wrapper {
+    flex-wrap: wrap;
+  }
+  .admissions__item {
+    width: 100%;
+  }
+  .principal__person .person__img {
+    min-width: 220px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .h2 {
+    font-size: 30px;
+    padding: 0 16px;
+  }
+  .h3 {
+    font-size: 18px;
+    padding: 0 16px;
+  }
+  .news__list {
+    flex-wrap: wrap;
+  }
+  .news__items {
+    width: 100%;
+  }
+  .news__item-1 {
+    width: 100%;
+  }
+  .lecturers__list {
+    flex-wrap: wrap;
+  }
+  .lecturers__list .lecturer {
+    width: 100%;
+  }
+  .lecturers__list .lecturer__info p {
+    font-size: 16px;
+  }
+  .students__description {
+    font-size: 16px;
+  }
+  .students__list {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .students__list div {
+    width: calc(50% - 16px);
+  }
+  .principal__person {
+    flex-direction: column;
+  }
+  .principal__person .person__img {
+    min-width: 220px;
+  }
+  .principal__person .person__info .name {
+    text-align: center;
+  }
+  .consultation__form h3 {
+    font-size: 30px;
+  }
+  .consultation__form input {
+    font-size: 14px;
+  }
+  .consultation__form form {
+    padding: 0 40px;
+  }
+  .consultation__form .form__btn button {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .banner__department {
+    margin: 0px 16px;
+  }
+  .infrastructures__room .room {
+    width: 100%;
+  }
+  .infrastructures__room .room__name {
+    font-size: 20px;
+  }
+  .infrastructures__room .room span {
+    font-size: 16px;
+  }
+  .infrastructures__room .room__code {
+    text-align: center;
+  }
+  .principal__person {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .students__list div {
+    width: 100%;
+  }
+  .principal__person {
+    padding: 0;
+  }
+  .consultation {
+    padding: 48px 16px;
+  }
+  .consultation__wrapper {
+    width: 100%;
+  }
+  .consultation__form {
+    max-width: 100%;
+  }
+  .consultation__time .dot-wrapper {
+    display: none;
+  }
+  .consultation__time .counter {
+    flex: 1;
+  }
+  .consultation__time .counter .timer {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/app.scss%22,%22../../scss/variable.scss%22,%22../../libs/slick/slick.scss%22,%22../../scss/components/header.scss%22,%22../../scss/components/footer.scss%22,%22../../scss/home.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAGR;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;AAAA;AAAA;EAGE,OChBW;;;ADmBb;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAOE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,kBC5DO;ED6DP;EACA;EACA;EACA;;AAEA;EACE,kBCpEK;EDqEL;;;AAIJ;EACE;EACA;EACA;EACA,OCpEW;EDqEX;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AEzFF;AAEA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;;AAGJ;EACI;EACA;;;AAGR;AAAA;EAEI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EAEI;EACA;;AAGJ;EACI;;AAGJ;EACI;;;AAGR;EACI;EACA;EACA;EAWA;;AAVA;EACI;;AAEJ;EACI;;AAEJ;EACI;;AAKJ;EACI;;AAGJ;EACI;;AAGJ;EACI;;AAGJ;EACI;EACA;EACA;;;AAGR;EACI;;;AClGJ;EACE;EACA,YFDO;;;AEIT;EACE;EACA,kBFFQ;;AEIR;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,kBF7BC;;AEiCL;EACE;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAIA;EACE;;AAGF;EACE,kBFxDD;;AE2DD;EACE;;AAMR;EACE;EACA;;AAEA;EACE;EACA;EACA,kBFzEG;;AE2EH;EACE,kBF7EC;;AEiFL;EACE;EACA;;AAIJ;EACE;;AAIA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBFtGG;;;AE2GT;EACE;EACA;EACA;;AAGE;EACE,OFlHG;EEmHH;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;;AAKN;EACE;;;AAGF;EACE;IACE;;EAEA;IACE;;EAGF;IACE;;EAGF;IACE;IACA;IACA;;EAEA;IACE;IACA,OFzJC;;EE8JP;IACE;IACA;IACA;IACA;;EAEA;IACE;IACA;IACA;IACA;IACA;;EAGF;IACE;IACA;IACA;IACA;IACA,kBF7KI;IE8KJ;;EAEA;IACE;IACA;IACA;;EAKF;IACE;IACA;IACA;IACA;IACA;IACA;;EAEA;IACE,kBFlMD;;EEqMD;IACE;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAIJ;IACE;IACA;;EAGF;IACE,kBFxNC;;EE0ND;IACE;;EAKN;IACE;;EAEA;IACE;IACA;;EAEA;IACE,kBFxOD;;EE6OL;IACE;IACA;IACA;IACA;IACA;IACA;;;ACvPN;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAIA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA,OHpBG;EGqBH;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA,kBHzCC;;AG4CH;EACE;EACA;;AAGF;EACE;EACA,OHnDC;;AGyDL;EACE;EACA;;;AAKN;EAEI;IACE;IACA;;EAIA;IACE;IACA;IACA;;EAEF;IACE;;EAIJ;IACE;;EACA;IACE;IACA;;;AAMR;EAIQ;IACE;;;AC7FV;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBJzCK;EI0CL;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA,OJ9CM;EI+CN;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,OJ7EK;EI8EL;EACA;;AAEA;EACE;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA,kBJlGC;EImGD;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA,kBJ9GC;EI+GD;EACA;EACA;;AAIJ;EACE;EACA;EACA;;AAEA;EACE,OJ3HC;EI4HD;EACA;EACA;EACA;EACA;;AAGF;EACE,OJpIC;EIqID;EACA;EACA;;AAIJ;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE,OJvJC;EIwJD;EACA;EACA;;AAKN;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA,kBJlKI;EImKJ,OJ7KG;EI8KH,OJ9KG;EI+KH;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA,kBJhLO;;AImLT;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA,OJ9LI;;AIiMN;EACE;EACA;EACA;;;AAMR;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;;AAEA;EACE;EACA;EACA;EACA,kBJhOK;EIiOL;;AAEA;AAAA;AAAA;EAGE;;AAGF;EACE;EACA;EACA;;AAIJ;EACE;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAIA;EACE;EACA,kBJpQG;;AIsQH;EACE;EACA;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,OJvRC;;AI4RP;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAIJ;EACE;EACA,OJtTG;EIuTH;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAIJ;EACE;;AAGF;EACE;EACA;EACA,kBJ9UK;EI+UL;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAIJ;EACE;EACA;EACA;;AAGE;EACE,OJ1VK;EI2VL;;AAIJ;EACE,kBJ9VI;EI+VJ,OJzWG;EI0WH;EACA;EACA;;;AAMJ;EACE;;;AAIJ;EACE;EACA;EACA;;AAEA;EACE,OJ7XK;;AIgYP;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA,kBJxZC;EIyZD;EACA;EACA;EACA;EACA;;AAIA;EACE;EACA,OJnaD;EIoaC;EACA;;AAGF;EACE;EACA;;;AAOV;EACE,kBJ9aQ;EI+aR;;AAEA;EACE,OJtbK;;AIybP;EACE;EACA;EACA;;AAGF;EACE;EACA,kBJjcK;EIkcL;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAIA;EACE;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;;;AAMR;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAIA;EACE;;AAGF;EACE;;AAGF;EACE;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;;AAKN;EACE,kBJ5gBQ;EI6gBR;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAIJ;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA,kBJrjBC;EIsjBD;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;;;AAOV;EACE;EACA;;AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,OJ9mBG;EI+mBH,kBJ5mBG;;AI+mBL;EACE;EACA;EACA,OJlnBG;EImnBH;EACA;EACA;;AAGF;EACE;;AAGF;EACE,OJhoBG;EIioBH;EACA;EACA;EACA;EACA;EACA;EACA;;AAIJ;EACE;EACA;EACA;EACA,kBJ5oBK;EI6oBL;;;AAIJ;EACE;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA,kBJhqBK;EIiqBL;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;;AAEA;EACE;EACA;;;AAMR;EACE;EACA;;AAEA;EACE,OJ5rBK;EI6rBL;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;;AAEA;EACE;EACA;;AAKF;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;;;AAON;EACE;EACA;;AAGF;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA,kBJzvBK;;AI2vBL;EACE;EACA,OJ5vBG;EI6vBH;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAGE;EACE,OJxwBG;;AI4wBP;EACE;;AAGF;EACE,kBJ/wBE;EIgxBF,OJ1xBC;EI2xBD;;AAKN;EACE;EACA;EACA;EACA;EACA;;AAGE;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAKF;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;;AAQZ;EAEI;IACE;IACA;;EAGF;IACE;;EAKF;IACE;;EAGF;IACE;IACA;;;AAKN;EAEI;IACE;IACA;;EAKF;IACE;;EAGF;IACE;;;AAKN;EAEI;IACE;IACA;;EAGF;IACE;;EAGF;IACE;;EAGF;IACE;IACA;;EAGF;IACE;;EAGF;IACE;;EAGE;IACE;;EAKF;IACE;;EAGF;IACE;;EAKF;IACE;;EAMR;IACE;IACA;IACA;IACA;IACA;;EAEA;IACE;;EAGF;IACE;IACA;IACA;IACA;IACA;;EAGF;IACE;IACA;IACA;;;AAKN;EACE;IACE;IACA;IACA;IACA;IACA;;EAEA;IACE;;EAGF;IACE;IACA;IACA;IACA;;EAMA;IACE;;EAIJ;IACE;;EAKF;IACE;;EAGF;IACE;;EAGF;IACE;;EAGF;IACE;IACA;IACA;;EAEA;IACE;;EAMJ;IACE;;;AAKN;EAEI;IACE;;EAGF;IACE;;EAGF;IACE;IACA;;EAGF;IACE;;EAGF;IACE;;EAGE;IACE;IACA;;EAKF;IACE;;EAGF;IACE;IACA;;EAKF;IACE;;EAON;IACE;;EAEA;AAAA;IAEE;;EAIJ;IACE;;EAKF;IACE;;EAGF;IACE;;EAMA;IACE;;;AAMR;EACE;IACE;IACA;;EAGF;IACE;IACA;;EAIA;IACE;;EAGF;IACE;;EAGF;IACE;;EAKF;IACE;;EAEA;IACE;;EAGE;IACE;;EAQR;IACE;;EAGF;IACE;IACA;;EAEA;IACE;;EAMJ;IACE;;EAEA;IACE;;EAIA;IACE;;EAQJ;IACE;;EAGF;IACE;;EAGF;IACE;;EAGF;IACE;;;AAMR;EAEI;IACE;;EAMA;IACE;;EAEA;IACE;;EAGF;IACE;;EAGF;IACE;;EAON;IACE;;;AAKN;EAGM;IACE;;EAMJ;IACE;;EAIJ;IACE;;EAEA;IACE;;EAGF;IACE;;EAIA;IACE;;EAGF;IACE;;EAEA;IACE%22,%22file%22:%22home.css%22%7D */
