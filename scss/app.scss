@@ -51,6 +51,7 @@ a {
 
 .container {
   max-width: 1042px;
+  padding: 0;
 }
 
 .btn {
@@ -135,5 +136,11 @@ button {
         font-weight: 500;
       }
     }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 16px;
   }
 }
