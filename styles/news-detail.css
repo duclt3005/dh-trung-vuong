@@ -414,107 +414,222 @@ button {
     word-break: break-word;
   }
 }
-h1 {
-  margin-top: 12px;
-  color: #c92027;
-  text-align: center;
-  font-size: 34px;
-  font-weight: 900;
+.news {
+  padding-top: 12px;
+  padding-bottom: 30px;
+}
+.news .container {
+  padding: 0;
 }
 
-h2 {
-  margin-top: 18px;
-  color: #c92027;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
+.banner img {
+  width: 100%;
+  height: auto;
 }
 
-.news__list {
+.breadcrumb {
+  padding: 8px 10px;
+  margin: 12px 0;
+  background-color: #dedede;
+}
+.breadcrumb ul {
   display: flex;
-  flex-wrap: wrap;
+  gap: 4px;
+}
+.breadcrumb ul a,
+.breadcrumb ul span {
+  color: #c92027;
+  font-size: 14px;
+  font-weight: 500;
+}
+.breadcrumb ul a:hover {
+  text-decoration: underline;
+}
+
+.wrapper {
+  display: flex;
   justify-content: space-between;
-  row-gap: 22px;
-  margin-top: 12px;
 }
-.news__list .news {
-  width: calc(25% - 16.5px);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+.wrapper .content {
+  width: 734px;
 }
-.news__list .news__image {
-  padding: 8px;
-  background-color: #c92027;
+.wrapper .content h1 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #c92027;
 }
-.news__list .news__image img {
+.wrapper .content .time {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 4px 8px;
+  margin: 12px 0;
+}
+.wrapper .content .time span {
+  font-size: 10px;
+  color: #78909C;
+  margin-left: 4px;
+}
+.wrapper .content .post__content {
+  margin-bottom: 36px;
+}
+.wrapper .content .post__content p {
+  font-size: 12px;
+  color: #263238;
+  line-height: 21px;
+}
+.wrapper .content .post__content img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  margin: 8px 0;
 }
-.news__list .news__info {
-  margin-top: 14px;
-  padding: 0 24px;
-}
-.news__list .news__info p {
-  color: #c92027;
+.wrapper .content .post__related h3 {
   text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 1px solid #78909C;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.wrapper .content .post__related li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.wrapper .content .post__related li > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.wrapper .content .post__related li .dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #263238;
+  margin-right: 5px;
+}
+.wrapper .content .post__related li a {
+  color: #c92027;
+  font-size: 12px;
+  line-height: 21px;
+  max-width: 321px;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 14px;
+  margin-right: 16px;
 }
-.news__list .news__info a {
+.wrapper .content .post__related li a:hover {
+  text-decoration: underline;
+}
+.wrapper .content .post__related li span {
+  font-size: 10px;
+  color: #78909C;
+}
+.wrapper .sidebar {
+  width: 279px;
+}
+.wrapper .sidebar__item {
+  margin-bottom: 18px;
+}
+.wrapper .sidebar h3 {
+  font-weight: 700;
+  padding: 8px;
+  text-transform: uppercase;
+  background-color: #c92027;
+  font-size: 16px;
+  color: #fff;
+}
+.wrapper .sidebar__form {
+  padding: 12px 4px 4px 4px;
+  border-right: 1px solid #b0bec5;
+  border-bottom: 1px solid #b0bec5;
+  border-left: 1px solid #b0bec5;
+}
+.wrapper .sidebar__form form {
+  background-color: #c92027;
+  padding: 18px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 4px;
+}
+.wrapper .sidebar__form form input {
+  width: 220px;
+  font-size: 14px;
+}
+.wrapper .sidebar__form form button {
+  background-color: #fff200;
+  color: #c92027;
+  font-weight: 500;
+  font-size: 14px;
+}
+.wrapper .sidebar__form .counter {
+  background-color: #87040c;
+}
+.wrapper .sidebar__news {
+  padding: 16px 8px;
+  border-right: 1px solid #b0bec5;
+  border-bottom: 1px solid #b0bec5;
+  border-left: 1px solid #b0bec5;
+}
+.wrapper .sidebar__news .news__post {
+  display: flex;
+  gap: 4px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #78909C;
+  margin-bottom: 16px;
+}
+.wrapper .sidebar__news .news__post:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.wrapper .sidebar__news .news__post img {
+  width: 83px;
+  height: auto;
+  aspect-ratio: 4/3;
+}
+.wrapper .sidebar__news .news__post p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 12px;
-  font-weight: 700;
-  margin-bottom: 19px;
+  font-weight: 500;
+  line-height: 21px;
 }
-.news__list .news__info a:hover {
+.wrapper .sidebar__news .news__post:hover p {
   color: #c92027;
 }
 
-.news__btn {
-  display: flex;
-  justify-content: center;
-  margin: 25px 0;
-}
-
-@media screen and (max-width: 992px) {
-  .news__list {
-    justify-content: center;
-    gap: 22px;
+@media screen and (max-width: 1040px) {
+  .news .container {
+    padding: 0 16px;
   }
-  .news__list .news {
-    width: calc(33.3333333333% - 22px);
+  .wrapper {
+    flex-wrap: wrap;
   }
-}
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 26px;
+  .wrapper .content,
+  .wrapper .sidebar {
+    width: 100%;
   }
-  h2 {
-    font-size: 18px;
+  .wrapper .content {
+    margin-bottom: 16px;
   }
-  .news__list {
-    gap: 22px;
+  .wrapper .post__related li {
+    flex-wrap: wrap;
   }
-  .news__list .news {
-    width: calc(50% - 22px);
+  .wrapper .post__related li a {
+    max-width: 100%;
   }
-}
-@media screen and (max-width: 480px) {
-  .news__list {
-    gap: 16px;
-  }
-  .news__list .news {
+  .wrapper .post__related li .time {
     width: 100%;
   }
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/app.scss%22,%22../scss/variable.scss%22,%22../scss/components/header.scss%22,%22../scss/components/footer.scss%22,%22../scss/news.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAGR;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;AAAA;AAAA;EAGE,OCdW;;;ADiBb;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAOE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,kBC5DO;ED6DP;EACA;EACA;EACA;;AAEA;EACE,kBCpEK;EDqEL;;;AAIJ;EACE;EACA;EACA;EACA,OClEW;EDmEX;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;;;AAIA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;;AEpIR;EACE;EACA,YDHO;;;ACMT;EACE;EACA,kBDJQ;;ACMR;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,kBD/BC;;ACmCL;EACE;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAIA;EACE;;AAGF;EACE,kBD1DD;;AC6DD;EACE;;AAMR;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA,kBD5EG;;AC8EH;EACE,kBDhFC;;ACoFL;EACE;EACA;;AAIJ;EACE;;AAIA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBDzGG;;;AC8GT;EACE;EACA;EACA;;AAGE;EACE,ODrHG;ECsHH;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;;AAKN;EACE;;;AAGF;EACE;IACE;;EAEA;IACE;;EAGF;IACE;;EAGF;IACE;IACA;IACA;;EAEA;IACE;IACA,OD5JC;;ECiKP;IACE;IACA;IACA;IACA;IACA;;EAEA;IACE;IACA;IACA;IACA;IACA;;EAGF;IACE;IACA;IACA;IACA;IACA,kBDjLI;ICkLJ;;EAEA;IACE;IACA;IACA;;EAKF;IACE;IACA;IACA;IACA;IACA;IACA;;EAEA;IACE,kBDtMD;;ECyMD;IACE;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAIJ;IACE;IACA;;EAGF;IACE,kBD5NC;;EC8ND;IACE;;EAKN;IACE;;EAEA;IACE;IACA;;EAEA;IACE,kBD5OD;;ECiPL;IACE;IACA;IACA;IACA;IACA;IACA;;;ACzPN;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAIA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA,OFtBG;EEuBH;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA,kBF3CC;;AE8CH;EACE;EACA;;AAGF;EACE;EACA,OFrDC;;AE2DL;EACE;EACA;;;AAKN;EAEI;IACE;IACA;;EAIA;IACE;IACA;IACA;;EAEF;IACE;;EAIJ;IACE;;EACA;IACE;IACA;;;AAMR;EAIQ;IACE;;;AChGV;EACE;EACA,OHLO;EGMP;EACA;EACA;;;AAGF;EACE;EACA,OHbO;EGcP;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAEA;EACE;EACA,kBHjCG;;AGmCH;EACE;EACA;EACA;;AAIJ;EACE;EACA;;AAEA;EACE,OH/CC;EGgDD;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,OHpED;;;AG2ET;EACE;EACA;EACA;;;AAGF;EACE;IACE;IACA;;EAEA;IACE;;;AAKN;EACE;IACE;;EAGF;IACE;;EAGF;IACE;;EACA;IACE;;;AAKN;EACE;IACE;;EAEA;IACE%22,%22file%22:%22news.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/app.scss%22,%22../scss/variable.scss%22,%22../scss/components/header.scss%22,%22../scss/components/footer.scss%22,%22../scss/news-detail.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAGR;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;AAAA;AAAA;EAGE,OCdW;;;ADiBb;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAOE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,kBC5DO;ED6DP;EACA;EACA;EACA;;AAEA;EACE,kBCpEK;EDqEL;;;AAIJ;EACE;EACA;EACA;EACA,OClEW;EDmEX;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;;;AAIA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;;AEpIR;EACE;EACA,YDHO;;;ACMT;EACE;EACA,kBDJQ;;ACMR;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,kBD/BC;;ACmCL;EACE;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAIA;EACE;;AAGF;EACE,kBD1DD;;AC6DD;EACE;;AAMR;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA,kBD5EG;;AC8EH;EACE,kBDhFC;;ACoFL;EACE;EACA;;AAIJ;EACE;;AAIA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBDzGG;;;AC8GT;EACE;EACA;EACA;;AAGE;EACE,ODrHG;ECsHH;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;;AAKN;EACE;;;AAGF;EACE;IACE;;EAEA;IACE;;EAGF;IACE;;EAGF;IACE;IACA;IACA;;EAEA;IACE;IACA,OD5JC;;ECiKP;IACE;IACA;IACA;IACA;IACA;;EAEA;IACE;IACA;IACA;IACA;IACA;;EAGF;IACE;IACA;IACA;IACA;IACA,kBDjLI;ICkLJ;;EAEA;IACE;IACA;IACA;;EAKF;IACE;IACA;IACA;IACA;IACA;IACA;;EAEA;IACE,kBDtMD;;ECyMD;IACE;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAIJ;IACE;IACA;;EAGF;IACE,kBD5NC;;EC8ND;IACE;;EAKN;IACE;;EAEA;IACE;IACA;;EAEA;IACE,kBD5OD;;ECiPL;IACE;IACA;IACA;IACA;IACA;IACA;;;ACzPN;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAIA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA,OFtBG;EEuBH;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA,kBF3CC;;AE8CH;EACE;EACA;;AAGF;EACE;EACA,OFrDC;;AE2DL;EACE;EACA;;;AAKN;EAEI;IACE;IACA;;EAIA;IACE;IACA;IACA;;EAEF;IACE;;EAIJ;IACE;;EACA;IACE;IACA;;;AAMR;EAIQ;IACE;;;AChGV;EACE;EACA;;AAEA;EACE;;;AAKF;EACE;EACA;;;AAIJ;EACE;EACA;EACA;;AAEA;EACE;EACA;;AACA;AAAA;EAEE,OH7BG;EG8BH;EACA;;AAGF;EACE;;;AAKN;EACE;EACA;;AAEA;EACE;;AAEA;EACE;EACA;EACA,OHlDG;;AGqDL;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA,OHtDI;EGuDJ;;AAIJ;EACE;;AAEA;EACE;EACA,OH9DK;EG+DL;;AAGF;EACE;EACA;EACA;EACA;;AAKF;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA,kBHnGG;EGoGH;;AAGF;EACE,OHlHD;EGmHC;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAIJ;EACE;EACA,OH5HE;;AGkIV;EACE;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA,kBHrJG;EGsJH;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE,kBHjKC;EGkKD;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAIJ;EACE;;AAIJ;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;;AAEF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAIA;EACE,OHhOH;;;AGwOT;EAEI;IACE;;EAIJ;IACE;;EAEA;AAAA;IAEE;;EAGF;IACE;;EAIA;IACE;;EAEA;IACE;;EAGF;IACE%22,%22file%22:%22news-detail.css%22%7D */

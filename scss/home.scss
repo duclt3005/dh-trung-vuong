@@ -825,46 +825,6 @@
         background-color: #fff;
       }
     }
-
-    .counter {
-      p {
-        color: #fff;
-        font-size: 14px;
-        font-weight: 500;
-        text-align: center;
-      }
-
-      .timer {
-        display: flex;
-        gap: 8px;
-        margin-top: 12px;
-
-        &__item {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 4px;
-
-          span:first-child {
-            width: 43px;
-            height: 43px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background-color: #fff;
-            font-size: 20px;
-            font-weight: 500;
-          }
-
-          span:last-child {
-            color: #fff;
-            font-size: 14px;
-            font-weight: 500;
-          }
-        }
-      }
-    }
   }
 }
 
@@ -1326,10 +1286,6 @@
 
       .counter {
         flex: 1;
-
-        .timer {
-          justify-content: center;
-        }
       }
     }
   }

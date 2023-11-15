@@ -92,4 +92,39 @@ button {
   padding: 12px 0;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/app.scss%22,%22../scss/variable.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAGR;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;AAAA;AAAA;EAGE,OChBW;;;ADmBb;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAOE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,kBC5DO;ED6DP;EACA;EACA;EACA;;AAEA;EACE,kBCpEK;EDqEL;;;AAIJ;EACE;EACA;EACA;EACA,OCpEW;EDqEX;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA%22,%22file%22:%22app.css%22%7D */
+.counter p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+.counter .timer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+.counter .timer__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.counter .timer__item span:first-child {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.counter .timer__item span:last-child {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/app.scss%22,%22../scss/variable.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAGR;EACE;EACA;;AAGF;EACE;EACA;;AAGF;EACE;;;AAGF;EACE;EACA;;;AAGF;AAAA;AAAA;EAGE,OCdW;;;ADiBb;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAOE;;;AAGF;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,kBC5DO;ED6DP;EACA;EACA;EACA;;AAEA;EACE,kBCpEK;EDqEL;;;AAIJ;EACE;EACA;EACA;EACA,OClEW;EDmEX;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;;;AAIA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA%22,%22file%22:%22app.css%22%7D */

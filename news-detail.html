@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tin tức - Đại học Trưng Vương</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/news-detail.css" />
+  </head>
+  <body>
+    <!------------- Header ------------->
+    <header>
+      <div class="top-header"></div>
+      <div class="header">
+        <div class="container">
+          <div class="header__logo">
+            <a href="/"><img src="images/logo.png" alt="" /></a>
+            <div class="logo-text">
+              <p class="logo-text--university">Đại học trưng vương</p>
+              <p class="logo-text--faculty">“Khoa Truyền thông”</p>
+            </div>
+          </div>
+          <ul class="header__menu">
+            <li><a href="">Trang chủ</a></li>
+            <li class="header__menu--child">
+              <a href="">Tuyển sinh</a>
+              <ul class="header__submenu">
+                <li><a href="">Đề án và Thông báo tuyển sinh</a></li>
+                <li><a href="">Quỹ học bổng Tân sinh viên</a></li>
+                <li><a href="">Tin tức Tuyển sinh và kỳ thi THPT QG</a></li>
+                <li><a href="">Đăng ký xét tuyển ONLINE</a></li>
+                <li><a href="">Đăng ký tư vấn</a></li>
+              </ul>
+            </li>
+            <li class="header__menu--child">
+              <a href="">Đào tạo</a>
+              <ul class="header__submenu">
+                <li>
+                  <a href="" class="submenu__item"> Chương trình đào tạo cử nhân ngành Truyền thông đa phương tiện </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="">Giảng viên</a></li>
+            <li class="header__menu--child">
+              <a href="news.html">Tin tức</a>
+              <ul class="header__submenu">
+                <li><a href="">Tin tức Khoa</a></li>
+                <li><a href="">Tin tức Sinh Viên</a></li>
+              </ul>
+            </li>
+            <li class="header__menu--child">
+              <a href=""
+                >Mở rộng
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.29498 16.59L12.875 12L8.29498 7.41L9.70498 6L15.705 12L9.70498 18L8.29498 16.59Z"
+                    fill="#263238"
+                  />
+                </svg>
+              </a>
+              <ul class="header__submenu">
+                <li><a href="">Liên hệ</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="header__menu-mb js-header-mb">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="header__auth">
+            <a href="">Đăng ký tư vấn</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-mb">
+      <div class="header-mb__overlay js-header-mb-close"></div>
+      <div class="header-mb__content">
+        <div class="header-mb__close js-header-mb-close">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="header__logo">
+          <a href="/"><img src="images/logo.png" alt="" /></a>
+          <div class="logo-text">
+            <p class="logo-text--university">Đại học trưng vương</p>
+            <p class="logo-text--faculty">“Khoa Truyền thông”</p>
+          </div>
+        </div>
+        <ul class="header-mb__menu">
+          <li>
+            <div class="menu__item"><a href="">Trang chủ</a></div>
+          </li>
+          <li>
+            <div class="menu__item">
+              <a href="">Tuyển sinh</a>
+              <i class="fa-solid fa-angle-right js-open-submenu"></i>
+            </div>
+            <ul class="header-mb__submenu">
+              <li><a href="">Đề án và Thông báo tuyển sinh</a></li>
+              <li><a href="">Quỹ học bổng Tân sinh viên</a></li>
+              <li><a href="">Tin tức Tuyển sinh và kỳ thi THPT QG</a></li>
+              <li><a href="">Đăng ký xét tuyển ONLINE</a></li>
+              <li><a href="">Đăng ký tư vấn</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="menu__item">
+              <a href="">Đào tạo</a>
+              <i class="fa-solid fa-angle-right js-open-submenu"></i>
+            </div>
+            <ul class="header-mb__submenu">
+              <li>
+                <a href="" class="submenu__item"> Chương trình đào tạo cử nhân ngành Truyền thông đa phương tiện </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="menu__item"><a href="">Giảng viên</a></div>
+          </li>
+          <li>
+            <div class="menu__item">
+              <a href="">Tin tức</a>
+              <i class="fa-solid fa-angle-right js-open-submenu"></i>
+            </div>
+            <ul class="header-mb__submenu">
+              <li><a href="">Tin tức Khoa</a></li>
+              <li><a href="">Tin tức Sinh Viên</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="menu__item">
+              <a href=""> Mở rộng </a>
+              <i class="fa-solid fa-angle-right js-open-submenu"></i>
+            </div>
+            <ul class="header-mb__submenu">
+              <li><a href="">Liên hệ</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="news">
+      <div class="container">
+        <div class="banner">
+          <img src="images/news/banner.png" alt="" />
+        </div>
+        <div class="breadcrumb">
+          <ul>
+            <li><a href="">Trang chủ</a></li>
+            <li><span>>></span></li>
+            <li><a href=""> Tin tức Khoa Truyền thông</a></li>
+            <li><span>>></span></li>
+            <li><span>Rút ngắn thời gian</span></li>
+          </ul>
+        </div>
+        <div class="wrapper">
+          <div class="content">
+            <div class="post">
+              <h1>
+                Trang chủ Tin tức Khoa Truyền thông Rút gán thời than Trang chủ Tin tức Khoa Truyền thông Rút gán thời
+                than Trang chủ Tin tức Khoa Truyền thông Rút gán thời than
+              </h1>
+              <div class="time">
+                <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.33333 1.88908H6V1.22241H5.33333V1.88908H2.66667V1.22241H2V1.88908H1.66667C1.29667 1.88908 1.00333 2.18908 1.00333 2.55575L1 7.22241C1 7.58908 1.29667 7.88908 1.66667 7.88908H6.33333C6.7 7.88908 7 7.58908 7 7.22241V2.55575C7 2.18908 6.7 1.88908 6.33333 1.88908ZM6.33333 7.22241H1.66667V3.88908H6.33333V7.22241ZM6.33333 3.22241H1.66667V2.55575H6.33333V3.22241ZM3 5.22241H2.33333V4.55575H3V5.22241ZM4.33333 5.22241H3.66667V4.55575H4.33333V5.22241ZM5.66667 5.22241H5V4.55575H5.66667V5.22241ZM3 6.55575H2.33333V5.88908H3V6.55575ZM4.33333 6.55575H3.66667V5.88908H4.33333V6.55575ZM5.66667 6.55575H5V5.88908H5.66667V6.55575Z"
+                    fill="#19AFFF"
+                  />
+                </svg>
+                <span>Ngày đăng: 22/09/2023</span>
+              </div>
+              <div class="post__content">
+                <p>
+                  Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu nhu
+                  cầu của doanh nghiệp để đào tạo sinh viên với đầy đủ kỹ năng thực tế, hạn chế việc doanh nghiệp phải
+                  “đào tạo lại” sinh viên sau tốt nghiệp. Tiết kiệm thời gian và chi phí: chương trình học sẽ tập trung
+                  vào những nội dung quan trọng và cốt lõi, sinh viên không chỉ tiết kiệm chi phí học tập, ăn ở từ 0,5 –
+                  1 năm mà còn có thể bắt đầu kiếm thu nhập sớm hơn, giảm bớt gánh nặng tài chính cho gia đình và bản
+                  thân. Tăng cường ứng dụng và thực tiễn: Các môn chuyên ngành có thể được học ngay từ năm nhất và năm
+                  2, thay vì phải chờ đến năm 3. Sinh viên được tập trung vào các hoạt động thực hành, dự án nghiên cứu
+                  và trải nghiệm thực tế tại doanh nghiệp, giúp các bạn áp dụng kiến thức vào thực tiễn và phát triển kỹ
+                  năng thực hành. Kết hợp mô hình học online chủ động: tạo điều kiện học tập thuận lợi hơn cho sinh
+                  viên, điều mà rất ít trường hiện tại triển khai theo mô hình này. Nâng cao tính cạnh tranh trên thị
+                  trường lao động: Sinh viên ra trường từ chương trình đào tạo ngắn gọn thường có lợi thế cạnh tranh
+                </p>
+                <img src="images/news/tin-tuc.jpg" alt="" />
+                <p>
+                  Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu nhu
+                  cầu của doanh nghiệp để đào tạo sinh viên với đầy đủ kỹ năng thực tế, hạn chế việc doanh nghiệp phải
+                  “đào tạo lại” sinh viên sau tốt nghiệp. Tiết kiệm thời gian và chi phí: chương trình học sẽ tập trung
+                  vào những nội dung quan trọng và cốt lõi, sinh viên không chỉ tiết kiệm chi phí học tập, ăn ở từ 0,5 –
+                  1 năm mà còn có thể bắt đầu kiếm thu nhập sớm hơn, giảm bớt gánh nặng tài chính cho gia đình và bản
+                  thân. Tăng cường ứng dụng và thực tiễn: Các môn chuyên ngành có thể được học ngay từ năm nhất và năm
+                  2, thay vì phải chờ đến năm 3. Sinh viên được tập trung vào các hoạt động thực hành, dự án nghiên cứu
+                  và trải nghiệm thực tế tại doanh nghiệp, giúp các bạn áp dụng kiến thức vào thực tiễn và phát triển kỹ
+                  năng thực hành. Kết hợp mô hình học online chủ động: tạo điều kiện học tập thuận lợi hơn cho sinh
+                  viên, điều mà rất ít trường hiện tại triển khai theo mô hình này. Nâng cao tính cạnh tranh trên thị
+                  trường lao động: Sinh viên ra trường từ chương trình đào tạo ngắn gọn thường có lợi thế cạnh tranh
+                </p>
+                <img src="images/news/tin-tuc.jpg" alt="" />
+                <p>
+                  Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu nhu
+                  cầu của doanh nghiệp để đào tạo sinh viên với đầy đủ kỹ năng thực tế, hạn chế việc doanh nghiệp phải
+                  “đào tạo lại” sinh viên sau tốt nghiệp. Tiết kiệm thời gian và chi phí: chương trình học sẽ tập trung
+                  vào những nội dung quan trọng và cốt lõi, sinh viên không chỉ tiết kiệm chi phí học tập, ăn ở từ 0,5 –
+                  1 năm mà còn có thể bắt đầu kiếm thu nhập sớm hơn, giảm bớt gánh nặng tài chính cho gia đình và bản
+                  thân. Tăng cường ứng dụng và thực tiễn: Các môn chuyên ngành có thể được học ngay từ năm nhất và năm
+                  2, thay vì phải chờ đến năm 3. Sinh viên được tập trung vào các hoạt động thực hành, dự án nghiên cứu
+                  và trải nghiệm thực tế tại doanh nghiệp, giúp các bạn áp dụng kiến thức vào thực tiễn và phát triển kỹ
+                  năng thực hành. Kết hợp mô hình học online chủ động: tạo điều kiện học tập thuận lợi hơn cho sinh
+                  viên, điều mà rất ít trường hiện tại triển khai theo mô hình này. Nâng cao tính cạnh tranh trên thị
+                  trường lao động: Sinh viên ra trường từ chương trình đào tạo ngắn gọn thường có lợi thế cạnh tranh
+                </p>
+              </div>
+            </div>
+            <div class="post__related">
+              <h3>TIN TỨC LIÊN QUAN</h3>
+              <ul>
+                <li>
+                  <div>
+                    <span class="dot"></span>
+                    <a href="">Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm</a>
+                  </div>
+                  <span class="date">
+                    <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_90_3673)">
+                        <path
+                          d="M6.33333 1.38896H6V0.72229H5.33333V1.38896H2.66667V0.72229H2V1.38896H1.66667C1.29667 1.38896 1.00333 1.68896 1.00333 2.05562L1 6.72229C1 7.08896 1.29667 7.38896 1.66667 7.38896H6.33333C6.7 7.38896 7 7.08896 7 6.72229V2.05562C7 1.68896 6.7 1.38896 6.33333 1.38896ZM6.33333 6.72229H1.66667V3.38896H6.33333V6.72229ZM6.33333 2.72229H1.66667V2.05562H6.33333V2.72229ZM3 4.72229H2.33333V4.05562H3V4.72229ZM4.33333 4.72229H3.66667V4.05562H4.33333V4.72229ZM5.66667 4.72229H5V4.05562H5.66667V4.72229ZM3 6.05562H2.33333V5.38896H3V6.05562ZM4.33333 6.05562H3.66667V5.38896H4.33333V6.05562ZM5.66667 6.05562H5V5.38896H5.66667V6.05562Z"
+                          fill="#19AFFF"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_90_3673">
+                          <rect width="8" height="8" fill="white" transform="translate(0 0.0556641)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    Ngày đăng: 22/09/2023
+                  </span>
+                </li>
+                <li>
+                  <div>
+                    <span class="dot"></span>
+                    <a href="">Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm</a>
+                  </div>
+                  <span class="date">
+                    <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_90_3673)">
+                        <path
+                          d="M6.33333 1.38896H6V0.72229H5.33333V1.38896H2.66667V0.72229H2V1.38896H1.66667C1.29667 1.38896 1.00333 1.68896 1.00333 2.05562L1 6.72229C1 7.08896 1.29667 7.38896 1.66667 7.38896H6.33333C6.7 7.38896 7 7.08896 7 6.72229V2.05562C7 1.68896 6.7 1.38896 6.33333 1.38896ZM6.33333 6.72229H1.66667V3.38896H6.33333V6.72229ZM6.33333 2.72229H1.66667V2.05562H6.33333V2.72229ZM3 4.72229H2.33333V4.05562H3V4.72229ZM4.33333 4.72229H3.66667V4.05562H4.33333V4.72229ZM5.66667 4.72229H5V4.05562H5.66667V4.72229ZM3 6.05562H2.33333V5.38896H3V6.05562ZM4.33333 6.05562H3.66667V5.38896H4.33333V6.05562ZM5.66667 6.05562H5V5.38896H5.66667V6.05562Z"
+                          fill="#19AFFF"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_90_3673">
+                          <rect width="8" height="8" fill="white" transform="translate(0 0.0556641)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    Ngày đăng: 22/09/2023
+                  </span>
+                </li>
+                <li>
+                  <div>
+                    <span class="dot"></span>
+                    <a href="">Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm</a>
+                  </div>
+                  <span class="date">
+                    <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_90_3673)">
+                        <path
+                          d="M6.33333 1.38896H6V0.72229H5.33333V1.38896H2.66667V0.72229H2V1.38896H1.66667C1.29667 1.38896 1.00333 1.68896 1.00333 2.05562L1 6.72229C1 7.08896 1.29667 7.38896 1.66667 7.38896H6.33333C6.7 7.38896 7 7.08896 7 6.72229V2.05562C7 1.68896 6.7 1.38896 6.33333 1.38896ZM6.33333 6.72229H1.66667V3.38896H6.33333V6.72229ZM6.33333 2.72229H1.66667V2.05562H6.33333V2.72229ZM3 4.72229H2.33333V4.05562H3V4.72229ZM4.33333 4.72229H3.66667V4.05562H4.33333V4.72229ZM5.66667 4.72229H5V4.05562H5.66667V4.72229ZM3 6.05562H2.33333V5.38896H3V6.05562ZM4.33333 6.05562H3.66667V5.38896H4.33333V6.05562ZM5.66667 6.05562H5V5.38896H5.66667V6.05562Z"
+                          fill="#19AFFF"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_90_3673">
+                          <rect width="8" height="8" fill="white" transform="translate(0 0.0556641)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    Ngày đăng: 22/09/2023
+                  </span>
+                </li>
+                <li>
+                  <div>
+                    <span class="dot"></span>
+                    <a href="">Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm</a>
+                  </div>
+                  <span class="date">
+                    <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_90_3673)">
+                        <path
+                          d="M6.33333 1.38896H6V0.72229H5.33333V1.38896H2.66667V0.72229H2V1.38896H1.66667C1.29667 1.38896 1.00333 1.68896 1.00333 2.05562L1 6.72229C1 7.08896 1.29667 7.38896 1.66667 7.38896H6.33333C6.7 7.38896 7 7.08896 7 6.72229V2.05562C7 1.68896 6.7 1.38896 6.33333 1.38896ZM6.33333 6.72229H1.66667V3.38896H6.33333V6.72229ZM6.33333 2.72229H1.66667V2.05562H6.33333V2.72229ZM3 4.72229H2.33333V4.05562H3V4.72229ZM4.33333 4.72229H3.66667V4.05562H4.33333V4.72229ZM5.66667 4.72229H5V4.05562H5.66667V4.72229ZM3 6.05562H2.33333V5.38896H3V6.05562ZM4.33333 6.05562H3.66667V5.38896H4.33333V6.05562ZM5.66667 6.05562H5V5.38896H5.66667V6.05562Z"
+                          fill="#19AFFF"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_90_3673">
+                          <rect width="8" height="8" fill="white" transform="translate(0 0.0556641)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    Ngày đăng: 22/09/2023
+                  </span>
+                </li>
+                <li>
+                  <div>
+                    <span class="dot"></span>
+                    <a href="">Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm</a>
+                  </div>
+                  <span class="date">
+                    <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_90_3673)">
+                        <path
+                          d="M6.33333 1.38896H6V0.72229H5.33333V1.38896H2.66667V0.72229H2V1.38896H1.66667C1.29667 1.38896 1.00333 1.68896 1.00333 2.05562L1 6.72229C1 7.08896 1.29667 7.38896 1.66667 7.38896H6.33333C6.7 7.38896 7 7.08896 7 6.72229V2.05562C7 1.68896 6.7 1.38896 6.33333 1.38896ZM6.33333 6.72229H1.66667V3.38896H6.33333V6.72229ZM6.33333 2.72229H1.66667V2.05562H6.33333V2.72229ZM3 4.72229H2.33333V4.05562H3V4.72229ZM4.33333 4.72229H3.66667V4.05562H4.33333V4.72229ZM5.66667 4.72229H5V4.05562H5.66667V4.72229ZM3 6.05562H2.33333V5.38896H3V6.05562ZM4.33333 6.05562H3.66667V5.38896H4.33333V6.05562ZM5.66667 6.05562H5V5.38896H5.66667V6.05562Z"
+                          fill="#19AFFF"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_90_3673">
+                          <rect width="8" height="8" fill="white" transform="translate(0 0.0556641)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    Ngày đăng: 22/09/2023
+                  </span>
+                </li>
+                <li>
+                  <div>
+                    <span class="dot"></span>
+                    <a href="">Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm</a>
+                  </div>
+                  <span class="date">
+                    <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_90_3673)">
+                        <path
+                          d="M6.33333 1.38896H6V0.72229H5.33333V1.38896H2.66667V0.72229H2V1.38896H1.66667C1.29667 1.38896 1.00333 1.68896 1.00333 2.05562L1 6.72229C1 7.08896 1.29667 7.38896 1.66667 7.38896H6.33333C6.7 7.38896 7 7.08896 7 6.72229V2.05562C7 1.68896 6.7 1.38896 6.33333 1.38896ZM6.33333 6.72229H1.66667V3.38896H6.33333V6.72229ZM6.33333 2.72229H1.66667V2.05562H6.33333V2.72229ZM3 4.72229H2.33333V4.05562H3V4.72229ZM4.33333 4.72229H3.66667V4.05562H4.33333V4.72229ZM5.66667 4.72229H5V4.05562H5.66667V4.72229ZM3 6.05562H2.33333V5.38896H3V6.05562ZM4.33333 6.05562H3.66667V5.38896H4.33333V6.05562ZM5.66667 6.05562H5V5.38896H5.66667V6.05562Z"
+                          fill="#19AFFF"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_90_3673">
+                          <rect width="8" height="8" fill="white" transform="translate(0 0.0556641)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    Ngày đăng: 22/09/2023
+                  </span>
+                </li>
+                <li>
+                  <div>
+                    <span class="dot"></span>
+                    <a href="">Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm</a>
+                  </div>
+                  <span class="date">
+                    <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_90_3673)">
+                        <path
+                          d="M6.33333 1.38896H6V0.72229H5.33333V1.38896H2.66667V0.72229H2V1.38896H1.66667C1.29667 1.38896 1.00333 1.68896 1.00333 2.05562L1 6.72229C1 7.08896 1.29667 7.38896 1.66667 7.38896H6.33333C6.7 7.38896 7 7.08896 7 6.72229V2.05562C7 1.68896 6.7 1.38896 6.33333 1.38896ZM6.33333 6.72229H1.66667V3.38896H6.33333V6.72229ZM6.33333 2.72229H1.66667V2.05562H6.33333V2.72229ZM3 4.72229H2.33333V4.05562H3V4.72229ZM4.33333 4.72229H3.66667V4.05562H4.33333V4.72229ZM5.66667 4.72229H5V4.05562H5.66667V4.72229ZM3 6.05562H2.33333V5.38896H3V6.05562ZM4.33333 6.05562H3.66667V5.38896H4.33333V6.05562ZM5.66667 6.05562H5V5.38896H5.66667V6.05562Z"
+                          fill="#19AFFF"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_90_3673">
+                          <rect width="8" height="8" fill="white" transform="translate(0 0.0556641)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    Ngày đăng: 22/09/2023
+                  </span>
+                </li>
+                <li>
+                  <div>
+                    <span class="dot"></span>
+                    <a href="">Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm</a>
+                  </div>
+                  <span class="date">
+                    <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_90_3673)">
+                        <path
+                          d="M6.33333 1.38896H6V0.72229H5.33333V1.38896H2.66667V0.72229H2V1.38896H1.66667C1.29667 1.38896 1.00333 1.68896 1.00333 2.05562L1 6.72229C1 7.08896 1.29667 7.38896 1.66667 7.38896H6.33333C6.7 7.38896 7 7.08896 7 6.72229V2.05562C7 1.68896 6.7 1.38896 6.33333 1.38896ZM6.33333 6.72229H1.66667V3.38896H6.33333V6.72229ZM6.33333 2.72229H1.66667V2.05562H6.33333V2.72229ZM3 4.72229H2.33333V4.05562H3V4.72229ZM4.33333 4.72229H3.66667V4.05562H4.33333V4.72229ZM5.66667 4.72229H5V4.05562H5.66667V4.72229ZM3 6.05562H2.33333V5.38896H3V6.05562ZM4.33333 6.05562H3.66667V5.38896H4.33333V6.05562ZM5.66667 6.05562H5V5.38896H5.66667V6.05562Z"
+                          fill="#19AFFF"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_90_3673">
+                          <rect width="8" height="8" fill="white" transform="translate(0 0.0556641)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    Ngày đăng: 22/09/2023
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar">
+            <div class="sidebar__item">
+              <h3 class="title">ĐĂNG KÝ TƯ VẤN</h3>
+              <div class="sidebar__form">
+                <form action="">
+                  <input type="text" class="input" placeholder="Họ và Tên" />
+                  <input type="text" class="input" placeholder="Email" />
+                  <input type="text" class="input" placeholder="Số điện thoại" />
+                  <button>HOÀN TẤT ĐĂNG KÝ</button>
+                </form>
+                <div class="counter">
+                  <p>Thời gian xét tuyển có hạn</p>
+                  <div class="timer">
+                    <div class="timer__item">
+                      <span>24</span>
+                      <span>Giờ</span>
+                    </div>
+                    <div class="timer__item">
+                      <span>31</span>
+                      <span>Giờ</span>
+                    </div>
+                    <div class="timer__item">
+                      <span>05</span>
+                      <span>Tháng</span>
+                    </div>
+                    <div class="timer__item">
+                      <span>05</span>
+                      <span>Năm</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar__item">
+              <h3>TIN TỨC KHOA TRUYỀN THÔNG</h3>
+              <div class="sidebar__news">
+                <a href="" class="news__post">
+                  <img src="images/news/tin-tuc-sibdebar.png" alt="" />
+                  <p>
+                    Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu
+                    nhu cầu của doanh nghiệp để đào tạo sinh viên
+                  </p>
+                </a>
+                <a href="" class="news__post">
+                  <img src="images/news/tin-tuc-sibdebar.png" alt="" />
+                  <p>
+                    Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu
+                    nhu cầu của doanh nghiệp để đào tạo sinh viên
+                  </p>
+                </a>
+                <a href="" class="news__post">
+                  <img src="images/news/tin-tuc-sibdebar.png" alt="" />
+                  <p>
+                    Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu
+                    nhu cầu của doanh nghiệp để đào tạo sinh viên
+                  </p>
+                </a>
+                <a href="" class="news__post">
+                  <img src="images/news/tin-tuc-sibdebar.png" alt="" />
+                  <p>
+                    Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu
+                    nhu cầu của doanh nghiệp để đào tạo sinh viên
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="sidebar__item">
+              <h3>TIN TỨC KHOA TRUYỀN THÔNG</h3>
+              <div class="sidebar__news">
+                <a href="" class="news__post">
+                  <img src="images/news/tin-tuc-sibdebar.png" alt="" />
+                  <p>
+                    Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu
+                    nhu cầu của doanh nghiệp để đào tạo sinh viên
+                  </p>
+                </a>
+                <a href="" class="news__post">
+                  <img src="images/news/tin-tuc-sibdebar.png" alt="" />
+                  <p>
+                    Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu
+                    nhu cầu của doanh nghiệp để đào tạo sinh viên
+                  </p>
+                </a>
+                <a href="" class="news__post">
+                  <img src="images/news/tin-tuc-sibdebar.png" alt="" />
+                  <p>
+                    Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu
+                    nhu cầu của doanh nghiệp để đào tạo sinh viên
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <div class="sidebar__item">
+              <h3>TIN TỨC KHOA TRUYỀN THÔNG</h3>
+              <div class="sidebar__news">
+                <a href="" class="news__post">
+                  <img src="images/news/tin-tuc-sibdebar.png" alt="" />
+                  <p>
+                    Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu
+                    nhu cầu của doanh nghiệp để đào tạo sinh viên
+                  </p>
+                </a>
+                <a href="" class="news__post">
+                  <img src="images/news/tin-tuc-sibdebar.png" alt="" />
+                  <p>
+                    Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu
+                    nhu cầu của doanh nghiệp để đào tạo sinh viên
+                  </p>
+                </a>
+                <a href="" class="news__post">
+                  <img src="images/news/tin-tuc-sibdebar.png" alt="" />
+                  <p>
+                    Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu
+                    nhu cầu của doanh nghiệp để đào tạo sinh viên
+                  </p>
+                </a>
+                <a href="" class="news__post">
+                  <img src="images/news/tin-tuc-sibdebar.png" alt="" />
+                  <p>
+                    Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu
+                    nhu cầu của doanh nghiệp để đào tạo sinh viên
+                  </p>
+                </a>
+                <a href="" class="news__post">
+                  <img src="images/news/tin-tuc-sibdebar.png" alt="" />
+                  <p>
+                    Với lợi thế từ sự đầu tư và hỗ trợ của Tập đoàn Hồ Gươm, Trường Đại học Trưng Vương luôn thấu hiểu
+                    nhu cầu của doanh nghiệp để đào tạo sinh viên
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------- Footer ------------->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__logo">
+          <a href="" class="logo"><img src="images/logo_footer.png" alt="" /></a>
+        </div>
+        <div class="footer__wrapper">
+          <div class="footer__info">
+            <p class="department">khoa truyền thông - đại học trưng vương</p>
+            <div class="info">
+              <span class="info__icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2.52734C8.13 2.52734 5 5.65734 5 9.52734C5 14.7773 12 22.5273 12 22.5273C12 22.5273 19 14.7773 19 9.52734C19 5.65734 15.87 2.52734 12 2.52734ZM12 12.0273C10.62 12.0273 9.5 10.9073 9.5 9.52734C9.5 8.14734 10.62 7.02734 12 7.02734C13.38 7.02734 14.5 8.14734 14.5 9.52734C14.5 10.9073 13.38 12.0273 12 12.0273Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              <div>
+                <span class="info__text">Địa chỉ cơ sở Vĩnh Phúc:</span>
+                <span>Km5, thị trấn Kim Long, huyện Tam Dương, tỉnh Vĩnh Phúc.</span>
+              </div>
+            </div>
+            <div class="info">
+              <span class="info__icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2.52734C8.13 2.52734 5 5.65734 5 9.52734C5 14.7773 12 22.5273 12 22.5273C12 22.5273 19 14.7773 19 9.52734C19 5.65734 15.87 2.52734 12 2.52734ZM12 12.0273C10.62 12.0273 9.5 10.9073 9.5 9.52734C9.5 8.14734 10.62 7.02734 12 7.02734C13.38 7.02734 14.5 8.14734 14.5 9.52734C14.5 10.9073 13.38 12.0273 12 12.0273Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              <div>
+                <span class="info__text">Địa chỉ cơ sở thực hành Hà Nội:</span>
+                <span>Tầng 12A, Tòa C, Hồ Gươm Plaza, 102 Trần Phú, Hà Đông, Hà Nội.</span>
+              </div>
+            </div>
+            <div class="info">
+              <span class="info__icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.62 11.3173C8.06 14.1473 10.38 16.4573 13.21 17.9073L15.41 15.7073C15.68 15.4373 16.08 15.3473 16.43 15.4673C17.55 15.8373 18.76 16.0373 20 16.0373C20.55 16.0373 21 16.4873 21 17.0373V20.5273C21 21.0773 20.55 21.5273 20 21.5273C10.61 21.5273 3 13.9173 3 4.52734C3 3.97734 3.45 3.52734 4 3.52734H7.5C8.05 3.52734 8.5 3.97734 8.5 4.52734C8.5 5.77734 8.7 6.97734 9.07 8.09734C9.18 8.44734 9.1 8.83734 8.82 9.11734L6.62 11.3173Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              <div>
+                <span class="info__text">Điện thoại:</span>
+                <span>0862159919</span>
+              </div>
+            </div>
+            <div class="info">
+              <span class="info__icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22 4.52734H2V20.5273H22V4.52734ZM20 8.52734L12 13.5273L4 8.52734V6.52734L12 11.5273L20 6.52734V8.52734Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              <div>
+                <span class="info__text">Email</span>
+                <span>khoatruyenthong@tv-uni.edu.vn</span>
+              </div>
+            </div>
+            <div class="info">
+              <span class="info__icon">
+                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_561_2199)">
+                    <path
+                      d="M16.7 40.3273C7.2 38.6273 0 30.4273 0 20.5273C0 9.52734 9 0.527344 20 0.527344C31 0.527344 40 9.52734 40 20.5273C40 30.4273 32.8 38.6273 23.3 40.3273L22.2 39.4273H17.8L16.7 40.3273Z"
+                      fill="#C92027"
+                    />
+                    <path
+                      d="M27.8 26.1271L28.7 20.5271H23.4V16.6271C23.4 15.0271 24 13.8271 26.4 13.8271H29V8.72715C27.6 8.52715 26 8.32715 24.6 8.32715C20 8.32715 16.8 11.1271 16.8 16.1271V20.5271H11.8V26.1271H16.8V40.2271C17.9 40.4272 19 40.5271 20.1 40.5271C21.2 40.5271 22.3 40.4272 23.4 40.2271V26.1271H27.8Z"
+                      fill="white"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_561_2199">
+                      <rect width="40" height="40" fill="white" transform="translate(0 0.527344)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </span>
+              <div>
+                <span class="info__text">Facebook:</span>
+                <span>www.facebook.com/trungvuonguniversity.media</span>
+              </div>
+            </div>
+            <div class="info">
+              <span class="info__icon">
+                <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M24.1518 7.48008C23.9619 7.38196 23.7771 7.27441 23.598 7.15781C23.0773 6.81355 22.5998 6.4079 22.176 5.94961C21.1154 4.73613 20.7193 3.50508 20.5734 2.64316H20.5793C20.4574 1.92773 20.5078 1.46484 20.5154 1.46484H15.685V20.1434C15.685 20.3941 15.685 20.642 15.6744 20.8869C15.6744 20.9174 15.6715 20.9455 15.6697 20.9783C15.6697 20.9918 15.6697 21.0059 15.6668 21.0199C15.6668 21.0234 15.6668 21.027 15.6668 21.0305C15.6159 21.7007 15.401 22.3481 15.0412 22.9157C14.6813 23.4834 14.1875 23.9539 13.6031 24.2859C12.9941 24.6324 12.3052 24.8142 11.6045 24.8133C9.3539 24.8133 7.52988 22.9781 7.52988 20.7117C7.52988 18.4453 9.3539 16.6102 11.6045 16.6102C12.0305 16.6098 12.4539 16.6768 12.859 16.8088L12.8648 11.8904C11.6352 11.7316 10.3859 11.8293 9.19592 12.1774C8.00591 12.5256 6.90096 13.1165 5.95078 13.9131C5.1182 14.6365 4.41825 15.4996 3.88242 16.4637C3.67851 16.8152 2.90918 18.2279 2.81601 20.5207C2.75742 21.8221 3.14824 23.1703 3.33457 23.7275V23.7393C3.45176 24.0674 3.90586 25.1871 4.6459 26.1311C5.24264 26.8882 5.94767 27.5534 6.73828 28.1051V28.0934L6.75 28.1051C9.08847 29.6941 11.6812 29.5898 11.6812 29.5898C12.1301 29.5717 13.6336 29.5898 15.341 28.7807C17.2348 27.8836 18.3129 26.5471 18.3129 26.5471C19.0016 25.7485 19.5493 24.8384 19.9324 23.8559C20.3695 22.7068 20.5154 21.3287 20.5154 20.7779V10.8686C20.574 10.9037 21.3545 11.4199 21.3545 11.4199C21.3545 11.4199 22.4789 12.1406 24.2332 12.61C25.4918 12.9439 27.1875 13.0143 27.1875 13.0143V8.21895C26.5934 8.2834 25.3869 8.0959 24.1518 7.48008Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+              <div>
+                <span class="info__text">Tiktok:</span>
+                <span>@tvuni.media</span>
+              </div>
+            </div>
+          </div>
+          <div class="footer__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3391817390134!2d105.78307117584033!3d20.97903668948343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab0c9dd17b4f%3A0x32774815ed43c610!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBUcsawbmcgVsawxqFuZw!5e0!3m2!1svi!2s!4v1699957012453!5m2!1svi!2s"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="./js/header.js"></script>
+  </body>
+</html>
