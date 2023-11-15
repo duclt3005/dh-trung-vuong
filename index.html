@@ -254,7 +254,7 @@
               <div class="item__image">
                 <img src="images/news/tin-tuc.jpg" alt="" />
               </div>
-              <a href="">
+              <a href="news-detail.html">
                 Rút ngắn thời gian đào tạo hệ đại học chính quy Trường Đại học Trưng Rút ngắn thời gian đào tạo hệ đại
                 học chính quy
               </a>
@@ -263,7 +263,7 @@
               <div class="item__image">
                 <img src="images/news/tin-tuc.jpg" alt="" />
               </div>
-              <a href="">
+              <a href="news-detail.html">
                 Rút ngắn thời gian đào tạo hệ đại học chính quy Trường Đại học Trưng Rút ngắn thời gian đào tạo hệ đại
                 học chính quy
               </a>
@@ -274,7 +274,7 @@
               <div class="item__image">
                 <img src="images/news/tin-tuc.jpg" alt="" />
               </div>
-              <a href="">
+              <a href="news-detail.html">
                 Rút ngắn thời gian đào tạo hệ đại học chính quy Trường Đại học Trưng Rút ngắn thời gian đào tạo hệ đại
                 học chính quy
               </a>
@@ -283,7 +283,7 @@
               <div class="item__image">
                 <img src="images/news/tin-tuc.jpg" alt="" />
               </div>
-              <a href="">
+              <a href="news-detail.html">
                 Rút ngắn thời gian đào tạo hệ đại học chính quy Trường Đại học Trưng Rút ngắn thời gian đào tạo hệ đại
                 học chính quy
               </a>
@@ -292,7 +292,7 @@
               <div class="item__image">
                 <img src="images/news/tin-tuc.jpg" alt="" />
               </div>
-              <a href="">
+              <a href="news-detail.html">
                 Rút ngắn thời gian đào tạo hệ đại học chính quy Trường Đại học Trưng Rút ngắn thời gian đào tạo hệ đại
                 học chính quy
               </a>
@@ -1171,20 +1171,20 @@
               <p>Thời gian xét tuyển có hạn</p>
               <div class="timer">
                 <div class="timer__item">
-                  <span>24</span>
+                  <span id="day"></span>
+                  <span>Ngày</span>
+                </div>
+                <div class="timer__item">
+                  <span id="hour"></span>
                   <span>Giờ</span>
                 </div>
                 <div class="timer__item">
-                  <span>31</span>
-                  <span>Giờ</span>
+                  <span id="minute"></span>
+                  <span>Phút</span>
                 </div>
                 <div class="timer__item">
-                  <span>05</span>
-                  <span>Tháng</span>
-                </div>
-                <div class="timer__item">
-                  <span>05</span>
-                  <span>Năm</span>
+                  <span id="second"></span>
+                  <span>Giây</span>
                 </div>
               </div>
             </div>
@@ -1328,6 +1328,7 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="./js/header.js"></script>
+    <script type="module" src="./js/counter.js"></script>
     <script type="module" src="./js/home.js"></script>
   </body>
 </html>
