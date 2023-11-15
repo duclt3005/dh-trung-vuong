@@ -530,6 +530,18 @@
   background-color: $dhtv-10;
   padding: 48px 0;
 
+  .slick-slide {
+    margin: 0 20px;
+  }
+
+  .slick-list {
+    margin: 0 -20px;
+  }
+
+  .slick-arrow {
+    display: none !important;
+  }
+
   &__description {
     display: flex;
     flex-direction: column;
@@ -660,7 +672,7 @@
 }
 
 .students {
-  background: url("./public/images/home/nen_top_sv.jpg");
+  background: url("../images/home/nen_top_sv.jpg");
   background-size: cover;
   padding: 41px 0 100px;
 
@@ -1018,7 +1030,8 @@
 
   .infrastructures {
     svg {
-      display: none;
+      margin: 0;
+      margin-top: -10px;
     }
 
     span {
@@ -1050,7 +1063,7 @@
 @media screen and (max-width: 992px) {
   .banner {
     &__department {
-      font-size: 22px;
+      font-size: 18px;
     }
 
     &__slogan {
@@ -1131,7 +1144,7 @@
 
 @media screen and (max-width: 768px) {
   .h2 {
-    font-size: 30px;
+    font-size: 26px;
     padding: 0 16px;
   }
 
@@ -1140,9 +1153,20 @@
     padding: 0 16px;
   }
 
+  .news,
+  .lecturers,
+  .infrastructures,
+  .principal {
+    .container {
+      width: 420px;
+      max-width: 100%;
+    }
+  }
+
   .news {
     &__list {
       flex-wrap: wrap;
+      gap: 24px;
     }
 
     &__items {
@@ -1167,6 +1191,24 @@
           }
         }
       }
+    }
+  }
+
+  .infrastructures {
+    &__room {
+      .room {
+        width: calc(50% - 16px);
+
+        &__code {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .major {
+    &__reasons {
+      margin: 24px auto;
     }
   }
 
@@ -1202,6 +1244,12 @@
   }
 
   .consultation {
+    .banner__content,
+    &__wrapper {
+      width: 420px;
+      max-width: 100%;
+    }
+
     &__form {
       h3 {
         font-size: 30px;
@@ -1240,10 +1288,6 @@
 
         span {
           font-size: 16px;
-        }
-
-        &__code {
-          text-align: center;
         }
       }
     }
