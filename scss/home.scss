@@ -7,7 +7,7 @@
   width: 100%;
   height: auto;
   aspect-ratio: 16/9;
-  background: url("/public/images/banner/background.jpg") center no-repeat;
+  background: url("../images/banner/background.jpg") center no-repeat;
   background-size: cover;
   position: relative;
   display: flex;
@@ -375,7 +375,7 @@
 }
 
 .major {
-  background: url("/public/images/home/nen_phong_hoc.png");
+  background: url("./public/images/home/nen_phong_hoc.png");
   background-size: cover;
   padding: 63px 0px 44px;
 
@@ -660,7 +660,7 @@
 }
 
 .students {
-  background: url("/public/images/home/nen_top_sv.jpg");
+  background: url("./public/images/home/nen_top_sv.jpg");
   background-size: cover;
   padding: 41px 0 100px;
 
