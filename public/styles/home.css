@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @font-face {
   font-family: "SVN-Bali Script";
-  src: url("/public/font/SVN-Bali-Script.ttf");
+  src: url("../font/SVN-Bali-Script.ttf");
 }
 @font-face {
   font-family: "UTM HelvetIns";
-  src: url("/public/font/UTM HelvetIns.ttf");
+  src: url("../font/UTM HelvetIns.ttf");
 }
 * {
   box-sizing: border-box;
@@ -785,7 +785,7 @@ button {
 }
 
 .major {
-  background: url("./public/images/home/nen_phong_hoc.png");
+  background: url("../images/home/nen_phong_hoc.png");
   background-size: cover;
   padding: 63px 0px 44px;
 }
