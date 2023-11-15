@@ -1,0 +1,211 @@
+.top-header {
+  height: 12px;
+  background: #c92027;
+}
+
+.header {
+  padding: 8px 0;
+  background-color: #ffebed;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0;
+}
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+  flex-grow: 1;
+}
+.header__menu a {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.014px;
+  white-space: nowrap;
+}
+.header__menu a:hover {
+  background-color: #ffccd1;
+}
+.header__menu--child {
+  position: relative;
+}
+.header__menu--child svg {
+  transition: all 0.2s;
+}
+.header__menu--child::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 4px;
+  z-index: 10;
+}
+.header__menu--child:hover .header__submenu {
+  display: block;
+}
+.header__menu--child:hover a {
+  background-color: #ffccd1;
+}
+.header__menu--child:hover svg {
+  transform: rotate(90deg);
+}
+.header__submenu {
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+.header__submenu a {
+  white-space: nowrap;
+  margin-top: 1px;
+  background-color: #ffccd1;
+}
+.header__submenu a:hover {
+  background-color: #f19998;
+}
+.header__submenu .submenu__item {
+  width: 224px;
+  white-space: unset;
+}
+.header__menu-mb {
+  display: none;
+}
+.header__auth a {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 32px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.014px;
+  color: #fff;
+  background-color: #c92027;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__logo .logo-text--university {
+  color: #c92027;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.175px;
+  text-transform: uppercase;
+}
+.header__logo .logo-text--faculty {
+  color: #018953;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.08px;
+}
+
+.header-mb {
+  display: none;
+}
+
+@media screen and (max-width: 1040px) {
+  .header {
+    padding: 8px 16px;
+  }
+  .header .logo-text {
+    display: none;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__menu-mb {
+    display: block;
+    flex-grow: 1;
+    cursor: pointer;
+  }
+  .header__menu-mb i {
+    font-size: 24px;
+    color: #c92027;
+  }
+  .header-mb {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  .header-mb__overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .header-mb__content {
+    position: fixed;
+    width: 360px;
+    left: -360px;
+    height: 100%;
+    background-color: #ffebed;
+    transition: all 0.4s ease-in-out;
+  }
+  .header-mb__content .header__logo {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+  }
+  .header-mb__menu .menu__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 16px;
+  }
+  .header-mb__menu .menu__item:hover {
+    background-color: #ffccd1;
+  }
+  .header-mb__menu .menu__item i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .header-mb__menu a {
+    display: inline-block;
+    width: 100%;
+  }
+  .header-mb__menu .menu__item.active {
+    background-color: #ffccd1;
+  }
+  .header-mb__menu .menu__item.active i {
+    transform: rotate(90deg);
+  }
+  .header-mb__submenu {
+    display: none;
+  }
+  .header-mb__submenu li {
+    padding: 16px 32px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .header-mb__submenu li:hover {
+    background-color: #ffccd1;
+  }
+  .header-mb__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/components/header.scss%22,%22../../scss/variable.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACE;EACA,YCHO;;;ADMT;EACE;EACA,kBCJQ;;ADMR;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE,kBC/BC;;ADmCL;EACE;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;;AAIA;EACE;;AAGF;EACE,kBC1DD;;AD6DD;EACE;;AAMR;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA,kBC5EG;;AD8EH;EACE,kBChFC;;ADoFL;EACE;EACA;;AAIJ;EACE;;AAIA;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBCzGG;;;AD8GT;EACE;EACA;EACA;;AAGE;EACE,OCrHG;EDsHH;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;;AAKN;EACE;;;AAGF;EACE;IACE;;EAEA;IACE;;EAGF;IACE;;EAGF;IACE;IACA;IACA;;EAEA;IACE;IACA,OC5JC;;EDiKP;IACE;IACA;IACA;IACA;IACA;;EAEA;IACE;IACA;IACA;IACA;IACA;;EAGF;IACE;IACA;IACA;IACA;IACA,kBCjLI;IDkLJ;;EAEA;IACE;IACA;IACA;;EAKF;IACE;IACA;IACA;IACA;IACA;IACA;;EAEA;IACE,kBCtMD;;EDyMD;IACE;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAIJ;IACE;IACA;;EAGF;IACE,kBC5NC;;ED8ND;IACE;;EAKN;IACE;;EAEA;IACE;IACA;;EAEA;IACE,kBC5OD;;EDiPL;IACE;IACA;IACA;IACA;IACA;IACA%22,%22file%22:%22header.css%22%7D */

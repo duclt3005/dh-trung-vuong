@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "sass-dev": "sass ./scss:public/styles",
-    "sass-watch": "sass --watch --embed-source-map ./scss:public/styles",
-    "sass-prod": "sass --no-source-map --style compressed ./scss:public/styles",
+    "sass-dev": "sass ./scss:styles",
+    "sass-watch": "sass --watch --embed-source-map ./scss:styles",
+    "sass-prod": "sass --no-source-map --style compressed ./scss:styles",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "duclt",
