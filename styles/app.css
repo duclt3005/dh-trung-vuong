@@ -128,7 +128,7 @@ button {
   font-weight: 500;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1040px) {
   .container {
     padding: 0 16px;
   }

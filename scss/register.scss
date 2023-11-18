@@ -36,7 +36,9 @@ h3 {
   margin-bottom: 18px;
 }
 
-.col {
+.col,
+.col-12,
+.col-md-12 {
   padding: 0;
 }
 
@@ -158,6 +160,10 @@ input[type="date"]::-webkit-datetime-edit-year-field {
         border-radius: 50%;
         background-color: $neutral-10;
       }
+
+      a {
+        word-wrap: break-word;
+      }
     }
 
     .link {
@@ -201,5 +207,63 @@ input[type="date"]::-webkit-datetime-edit-year-field {
   button {
     margin: 18px 0;
     width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .score {
+    &__list {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: calc(100% / 3 - 15px);
+    }
+  }
+
+  .notice {
+    flex-wrap: wrap;
+
+    &__note {
+      width: 100%;
+    }
+
+    &__content {
+      width: 100%;
+
+      p,
+      li {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .score {
+    &__item {
+      width: calc(100% / 2 - 15px);
+    }
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .score {
+    &__item {
+      width: 100%;
+    }
   }
 }
