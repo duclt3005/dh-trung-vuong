@@ -38,13 +38,22 @@ h3 {
 
 .col,
 .col-12,
-.col-md-12 {
+.col-md-4,
+.col-md-6 {
   padding: 0;
 }
 
 .row {
   gap: 18px;
   padding: 0 12px;
+
+  .col-md-4 {
+    width: calc(100% / 3 - 18px);
+  }
+
+  .col-md-6 {
+    width: calc(100% / 2 - 18px);
+  }
 }
 
 .information {
