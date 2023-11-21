@@ -1262,6 +1262,11 @@
   .admissions {
     table {
       .item__col {
+        td:first-child {
+          font-size: 13px;
+          width: 125px;
+        }
+
         td:last-child {
           white-space: wrap;
         }
@@ -1303,6 +1308,24 @@
 
       .counter {
         flex: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .admissions {
+    .item__header {
+      white-space: wrap;
+    }
+
+    table {
+      .item__col {
+        td:first-child {
+          font-size: 12px;
+          width: 100px;
+          white-space: wrap;
+        }
       }
     }
   }
