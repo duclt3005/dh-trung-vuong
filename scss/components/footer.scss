@@ -65,6 +65,15 @@
   }
 }
 
+.contact {
+  position: fixed;
+  bottom: 18px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
 @media screen and (max-width: 1040px) {
   .footer {
     &__wrapper {

@@ -50,6 +50,15 @@
   height: 200px;
 }
 
+.contact {
+  position: fixed;
+  bottom: 18px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
 @media screen and (max-width: 1040px) {
   .footer__wrapper {
     flex-wrap: wrap;
@@ -76,4 +85,4 @@
   }
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/components/footer.scss%22,%22../../scss/variable.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAIA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA,OCtBG;EDuBH;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA,kBC3CC;;AD8CH;EACE;EACA;;AAGF;EACE;EACA,OCrDC;;AD2DL;EACE;EACA;;;AAKN;EAEI;IACE;;EAIA;IACE;IACA;IACA;;EAEF;IACE;;EAIJ;IACE;;EACA;IACE;IACA;;;AAMR;EAIQ;IACE%22,%22file%22:%22footer.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../scss/components/footer.scss%22,%22../../scss/variable.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAIA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA,OCtBG;EDuBH;;AAGF;EACE;EACA;EACA;EACA;;AAEA;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA,kBC3CC;;AD8CH;EACE;EACA;;AAGF;EACE;EACA,OCrDC;;AD2DL;EACE;EACA;;;AAKN;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EAEI;IACE;;EAIA;IACE;IACA;IACA;;EAEF;IACE;;EAIJ;IACE;;EACA;IACE;IACA;;;AAMR;EAIQ;IACE%22,%22file%22:%22footer.css%22%7D */

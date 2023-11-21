@@ -12,3 +12,7 @@ $(".js-header-mb-close").on("click", function () {
   $(".header-mb").slideUp();
   $(".header-mb__content").css("left", "-360px");
 });
+
+$(window).on("resize", function () {
+  $(".header-mb").hide();
+});
